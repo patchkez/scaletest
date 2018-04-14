@@ -2,6 +2,7 @@
 cd ~/scaletest/
 source coinlist
 count=0
+args=$@
 
 while [ "x${coinlist[count]}" != "x" ]
 do
@@ -10,7 +11,7 @@ do
   if [ "$name" != "" ]
     then
      echo $name 
-     komodo-cli -ac_name=$name $*
+     komodo-cli -ac_name=$name $args
   fi
   count=$(( $count +1 ))
 done
