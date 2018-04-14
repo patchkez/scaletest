@@ -36,6 +36,6 @@
 
 `./sync_assets -pubkey=`
 
-#To blast transactions
+### To blast transactions
 
 ./blastloop.sh
