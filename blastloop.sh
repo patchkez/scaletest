@@ -1,17 +1,7 @@
 #!/bin/bash 
 COUNTER=0
-COUNTER1=0
-while [  $COUNTER1 -lt 100 ]; do
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
+while [  $COUNTER -lt 3 ]; do
+  ./txsend $1 &
   sleep 7
-  let COUNTER1=COUNTER+1
+  let COUNTER=COUNTER+1
 done
