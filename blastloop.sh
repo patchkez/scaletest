@@ -1,7 +1,7 @@
 #!/bin/bash 
 COUNTER=0
 COUNTER1=0
-while [  $COUNTER1 -lt 1000 ]; do
+while [  $COUNTER1 -lt 100 ]; do
   ./txblast.sh 0.0001 &
   ./txblast.sh 0.0001 &
   ./txblast.sh 0.0001 &
