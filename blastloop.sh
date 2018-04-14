@@ -6,8 +6,8 @@ then
 fi
 
 COUNTER=0
-while [  $COUNTER -lt 3 ]; do
-  ./txblast $1 &
-  sleep 10
+while [  $COUNTER -lt 100 ]; do
+  ./txblast.sh $1 &
+  sleep 2
   let COUNTER=COUNTER+1
 done
