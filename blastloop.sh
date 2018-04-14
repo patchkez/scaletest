@@ -1,6 +1,17 @@
 #!/bin/bash 
 COUNTER=0
-while [  $COUNTER -lt 10 ]; do
-  ./txblast.sh 0.001 &
-  let COUNTER=COUNTER+1 
+COUNTER1=0
+while [  $COUNTER1 -lt 1000 ]; do
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  ./txblast.sh 0.0001 &
+  sleep 7
+  let COUNTER1=COUNTER+1
 done
