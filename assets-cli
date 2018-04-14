@@ -2,7 +2,7 @@
 cd ~/scaletest/
 source coinlist
 count=0
-args=$@
+args="$@"
 
 while [ "x${coinlist[count]}" != "x" ]
 do
