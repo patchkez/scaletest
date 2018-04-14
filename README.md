@@ -34,6 +34,7 @@
 
 ### To run the send many start all chains with a pubkey you own
 ### You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
+#### 5-10 UTXO of 100 should be plenty.
 
 `./sync_assets`
 
