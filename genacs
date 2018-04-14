@@ -1,21 +1,28 @@
 #!/bin/bash
-
-# Usage: ./genacs <numchains> <chainname> <supply>
-# Example: ./genacs 10 TXTEST 1000000
-
 numchains=$1
 chainname=$2
 numcoins=$3
 
+if [ -z ${1+x} ] || [ -z ${2+x} ] || [ -z ${3+x} ]
+then 
+    echo
+    echo "Usage: ./genacs <numchains> <chainname> <supply>"
+    echo "Example: ./genacs 10 TXTEST 1000000"
+    echo
+    exit
+fi
+
 startdir=$PWD
 manychainsout=manychains
-acfile=startacs
-genfile=startacsgen
-coinlistfile=coinlist
 ufwenablefile=acufwenable
 ufwdisablefile=acufwdisable
+coinlistfile=coinlist
+acfile=startacs
+genfile=startacsgen
+seedipfile=seedip
 
 cd ~/komodo/src
+git pull
 gcc -o manychains komodo_port.c
 ./manychains -gen $numchains $chainname $numcoins > $startdir/$manychainsout
 
@@ -36,13 +43,24 @@ do
     echo "'$acnameonly $acsupplyonly'" >> $coinlistfile
     echo "sudo ufw allow $p2pport comment '$acnameonly'" >> $ufwenablefile
     echo "sudo ufw delete allow $p2pport" >> $ufwdisablefile
-    echo "$komodo $acname $acsupply &" >> $acfile
-    echo "$komodo -gen $acname $acsupply &" >> $genfile
+    #echo "$komodo $acname $acsupply &" >> $acfile
+    #echo "$komodo -gen -genproclimit=1 $acname $acsupply &" >> $genfile
 done < "$manychainsout"
 
 echo ")" >> $coinlistfile
 
-chmod +x $acfile
-chmod +x $genfile
+myip=`curl -s4 checkip.amazonaws.com`
+echo "seed_ip=$myip" > $seedipfile
+
+rm $manychainsout
+#chmod +x $acfile
+#chmod +x $genfile
 chmod +x $ufwenablefile
 chmod +x $ufwdisablefile
+
+if [ -f $ufwenablefile ] && [ -f $ufwdisablefile ] && [ -f $seedipfile ] && [ -f $coinlistfile ]
+then
+    echo "Success!"
+else
+    echo "One or more files failed to generate"
+fi

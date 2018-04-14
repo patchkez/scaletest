@@ -45,11 +45,20 @@
 
 # Generate Chains
 
-### genac script generates the chains and opens all the firewall ports
-### This also generates the coinlist file. If you are the seed node you need to submit the coinlist file and the seedip file to this git repo. 
+### The **genac** script generates scripts for the test chains
+### It will generate four files which will need to be shared with the test organizer
+
+#### Usage
 
 `./genacs <numchains> <chainname> <supply>`
 
 #### Example
 
 `./genacs 10 TXTEST 1000000`
+
+File | Description
+---- | -----------
+acufwenable | UFW enable rules for generated ACs
+acufwdisable | Disable UFW rules for these ACs
+coinlist | Generated list of ACs needed for other scripts to run
+seedip | Your node IP address to be used as seed for other test nodes
