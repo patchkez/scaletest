@@ -1,0 +1,1 @@
+komodo-cli -ac_name=TXTEST sendmany "" "{\"RMfQwu5ey23eWJ4as2ckd8dqsQJwo836ny\":0.01,\"RQzkkncY8ehpRg8M4kvKmDMcbFxcJvohgk\":0.02}"
