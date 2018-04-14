@@ -3,7 +3,7 @@ source seedip
 source coinlist
 source pubkey.txt
 count=0
-delay=5
+delay=1
 
 while [ "x${coinlist[count]}" != "x" ]
 do
