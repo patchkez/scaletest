@@ -11,7 +11,7 @@ do
     then
      echo $name
      size=$(komodo-cli -ac_name=$name getmempoolinfo | awk ' /\"size\"/ {printf $2}' | sed 's/,//' )
-	 if $size < 100 then;
+	 if [ $size < 5000 ]; then
 		komodo-cli -ac_name=$name $1 $2 $3 $4 $5 $6 $7 $8 $9
 	 fi
   fi

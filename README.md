@@ -33,6 +33,7 @@
 `./assets-cli stop`
 
 ### To run the send many start all chains with a pubkey you own
+### You will need funds sent to the address from the seed node operator to the R address of this pubkey.
 
 `./sync_assets -pubkey=`
 
@@ -41,9 +42,11 @@
 ./blastloop.sh
 
 
+
 # Generate Chains
 
 ### genac script generates the chains and opens all the firewall ports
+### This also generates the coinlist file. If you are the seed node you need to submit the coinlist file and the seedip file to this git repo. 
 
 `./genacs <numchains> <chainname> <supply>`
 
