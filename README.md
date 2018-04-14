@@ -1,5 +1,5 @@
 # scaletest
-Scripts For Scale Tes
+Scripts For Scale Test
 
 sudo apt-get install git
 git clone https://github.com/blackjok3rtt/scaletest.git
