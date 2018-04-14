@@ -1,0 +1,17 @@
+#!/bin/bash
+magicfile=magic
+count=0
+
+source coinlist
+
+while [ "x${coinlist[count]}" != "x" ]
+do
+    all=${coinlist[count]}
+    name=${all%% *}
+    supply=`expr "$all" : '.* \(.*\)'`
+    if [ "$name" != "" ]
+    then
+        ~/komodo/src/komodod -ac_name=$name -ac_supply=$supply 2>&1 | grep ">>>>>>>>>>" | sed 's/>>>>>>>>>> //' | tee -a $magicfile
+    fi
+    count=$(( $count +1 ))
+done
