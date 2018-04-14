@@ -39,3 +39,14 @@
 ### To blast transactions
 
 ./blastloop.sh
+
+
+# Generate Chains
+
+### genac script generates the chains and opens all the firewall ports
+
+`./genacs <numchains> <chainname> <supply>`
+
+#### Example
+
+`./genacs 10 TXTEST 1000000`
