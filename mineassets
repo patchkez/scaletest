@@ -1,5 +1,5 @@
 #!/bin/bash
-source ip
+source seedip
 source coinlist
 source ~/komodo/src/pubkey.txt
 args=("$@")
