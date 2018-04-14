@@ -39,7 +39,7 @@
 
 ### To blast transactions
 
-./blastloop.sh
+./blastloop.sh 0.00777
 
 
 
