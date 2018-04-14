@@ -1,0 +1,11 @@
+#!/bin/bash
+cd ~/scaletest/
+source coinlist
+all=${coinlist[0]}
+name=${all%% *}
+  
+  if [ "$name" != "" ]
+    then
+     echo $name 
+     komodo-cli -ac_name=$name $*
+  fi
