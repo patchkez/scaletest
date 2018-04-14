@@ -1,10 +1,8 @@
 #!/bin/bash
 source seedip
 source coinlist
-source ~/komodo/src/pubkey.txt
-args=("$@")
 count=0
-delay=20
+delay=5
 while [ "x${coinlist[count]}" != "x" ]
 do
   all=${coinlist[count]}
@@ -12,7 +10,7 @@ do
   supply=`expr "$all" : '.* \(.*\)'`
   if [ "$name" != "" ]
     then
-     komodod -pubkey=$pubkey -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen $args &
+     komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen $args &
      sleep $delay
     fi
   count=$(( $count +1 ))
