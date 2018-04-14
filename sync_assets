@@ -1,6 +1,7 @@
 #!/bin/bash
 source seedip
 source coinlist
+source pubkey.txt
 count=0
 delay=20
 
@@ -12,7 +13,7 @@ do
   if [ "$name" != "" ]
     then
      echo $name 
-     komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip $1 &
+     komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -pubkey=$pubkey $1 &
      sleep $delay
     fi
   count=$(( $count +1 ))
