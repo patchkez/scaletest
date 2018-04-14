@@ -1,5 +1,5 @@
 #!/bin/bash
-seed_ip=172.16.16.113
+source ip
 source coinlist
 count=0
 delay=20
