@@ -37,10 +37,9 @@
 
 `./sync_assets`
 
-### To blast transactions
+### To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per node.
 
-./blastloop.sh 0.00777
-
+`./blastloop.sh`
 
 
 # Generate Chains
