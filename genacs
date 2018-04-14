@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Usage: ./genacs <numchains> <chainname> <supply>
+# Example: ./genacs 10 TXTEST 1000000
+
 numchains=$1
 chainname=$2
 numcoins=$3
