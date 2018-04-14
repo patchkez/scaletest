@@ -9,11 +9,13 @@ do
   name=${all%% *}
   if [ "$name" != "" ]
     then
-     echo $name
-     size=$(komodo-cli -ac_name=$name getmempoolinfo | awk ' /\"size\"/ {printf $2}' | sed 's/,//' )
-	 if [ "$size" -lt 5000 ]; then
-	 	komodo-cli -ac_name=$name $1 $2 $3 $4 $5 $6 $7 $8 $9 &
-	 fi
+       #size=$(komodo-cli -ac_name=$name getmempoolinfo | awk ' /\"size\"/ {printf $2}' | sed 's/,//' )
+       #if [ "$size" -lt 5000 ]; then
+	   # for i in `seq 1 25`;
+       #  do
+           komodo-cli -ac_name=$name $1 $2 $3 $4 $5 $6 $7 $8 $9 &
+       # done
+       #fi
   fi
   count=$(( $count +1 ))
 done

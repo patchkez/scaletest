@@ -1,17 +1,13 @@
 #!/bin/bash 
+if [[ $1 = "" ]]
+then
+ echo "no transaction size specified"
+ exit
+fi
+
 COUNTER=0
-COUNTER1=0
-while [  $COUNTER1 -lt 100 ]; do
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  ./txblast.sh 0.0001 &
-  sleep 7
-  let COUNTER1=COUNTER+1
+while [  $COUNTER -lt 100 ]; do
+  ./txblast.sh $1 &
+  sleep 2
+  let COUNTER=COUNTER+1
 done
