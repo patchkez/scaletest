@@ -2,7 +2,7 @@
 source seedip
 source coinlist
 count=0
-delay=5
+delay=1
 while [ "x${coinlist[count]}" != "x" ]
 do
   all=${coinlist[count]}
@@ -10,7 +10,7 @@ do
   supply=`expr "$all" : '.* \(.*\)'`
   if [ "$name" != "" ]
     then
-     komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen $args &
+     komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen  &
      sleep $delay
     fi
   count=$(( $count +1 ))
