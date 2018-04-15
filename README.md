@@ -1,60 +1,90 @@
-### Scripts For Scale Test
+# KMD Scaling Test 
 
-`sudo apt-get install git`
+This repo contains tools for easy setup to participate in the scaling test.
 
-`git clone https://github.com/blackjok3rtt/scaletest.git`
+Please sign up here: [Signup Sheet for Scaling Test](http://pad.supernet.org/Stress_Test_Signups)
 
-`cd scaletest`
+## Install Steps
 
-`./buildkomodo.sh`
+```shell
+sudo apt-get install git
+git clone https://github.com/blackjok3rtt/scaletest.git
+cd scaletest
+./buildkomodo.sh
+cd ~/scaletest
+```
 
-`cd ~/scaletest`
+When this is complete please refer to the section below for the role you are filling.
 
-### mineassets makes you a miner
+### For Transaction Blasters
 
-`./mineassets`
+You will need to create a pubkey.txt file and place it in the **scaletest** directory in the format.
 
-### sync_assets connects you as a normal node for sending/receiving transactions
+```shell
+pubkey=<yourpubkey>
+```
+*Detailed instructions for creating this forthcoming, but it is the same process as notary nodes follow to generate pubkey*
 
-`./sync_assets`
+Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuuing
 
-### TXTEST-cli lets you interact with the first chain only.
+You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
 
-`./TXTEST-cli getnewaddress`
+5-10 UTXO of 100 should be plenty.
 
-`./TXTEST-cli validateaddress`
+To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per node.
 
-`./TXTEST-cli dumpprivkey`
+```shell
+./sync_assets
+sh blastloop.sh
+```
 
-### assets-cli interacts with all the chains
+### For CPU Miners
 
-`./assets-cli importprivkey`
+```shell
+./mineassets
+```
 
-`./assets-cli stop`
+### For Regular Nodes (Stats, etc)
+```shell
+./sync_assets
+```
 
-### To run the send many start all chains with a pubkey you own
-### You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
-#### 5-10 UTXO of 100 should be plenty.
+## assets-cli 
 
-`./sync_assets`
+This file lets you interact with all the chains.
 
-### To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per node.
+Examples:
+```shell
+./assets-cli importprivkey
 
-`./blastloop.sh`
+./assets-cli stop
+```
+
+### TXTEST-cli 
+
+Interacts with just the first of the test chains only.
+
+Examples:
+```shell
+./TXTEST-cli getnewaddress
+./TXTEST-cli validateaddress
+./TXTEST-cli dumpprivkey
+```
+
+# Generating Chains
+
+**FOR THE FIRST ROUND OF TESTS THESE ARE NOT REQUIRED OF TESTERS**
+
+101 test assetchains have been created and seeded and the needed files are in the repository you cloned.  Do not run these scripts or you might overwrite files needed in the first round of testing.
+
+The **genac** script creates the initial parameters new test chains. 
+
+Four files will need to be shared with the test organizer and/or committed to this repo
 
 
-# Generate Chains
-
-### The **genac** script generates scripts for the test chains
-### It will generate four files which will need to be shared with the test organizer
-
-#### Usage
-
-`./genacs <numchains> <chainname> <supply>`
-
-#### Example
-
-`./genacs 10 TXTEST 1000000`
+```shell
+./genacs <numchains> <chainname> <supply>
+```
 
 File | Description
 ---- | -----------
