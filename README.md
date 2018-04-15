@@ -44,7 +44,7 @@ sh blastloop.sh
 ./mineassets
 ```
 
-### For Regular Nodes (Stats, etc)
+### For Regular Nodes (Stats, Mining Pool etc)
 ```shell
 ./sync_assets
 ```
@@ -92,3 +92,22 @@ acufwenable | UFW enable rules for generated ACs
 acufwdisable | Disable UFW rules for these ACs
 coinlist | Generated list of ACs needed for other scripts to run
 seedip | Your node IP address to be used as seed for other test nodes
+
+# Mining Pool Setup - ZNOMP
+
+For this setup, please ensure you have completed at least the steps for a Regular Node as it will need to retrieve info from the test chains config files.
+
+```shell
+cd ~/scaletest/znomp/
+nano generate
+```
+
+Edit the line `walletaddress=` and change the address to your pool wallet address` and save and exit
+
+```shell`
+./generate
+```
+
+Now two new subdirectories will be created `coins` and `pool_configs` which should have all the test chains setup to add to the pool software.
+
+Stratum ports are set to start at 20777 and increment by 1 for each additional test chain.
