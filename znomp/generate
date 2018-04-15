@@ -12,13 +12,16 @@ stratumport=20777
 cointemplate=$(<$coinstpl)
 pooltemplate=$(<$pooltpl)
 
-mkdir $coinsdir
-mkdir $poolconfigdir
+mkdir -p $coinsdir
+mkdir -p $poolconfigdir
 
 while read acname ports magic uknum acsupply ukword
 do
     acnameonly=$(echo $acname | sed 's/://')
-    magicrev=$(echo $magic | sed 's/magic.//' | rev)
+    magic=$(echo $magic | sed 's/magic.//')
+    for((i=0;i<=${#magic};i+=2)); do
+        magicrev="${magic:i:2}$magicrev"
+    done
 
     thisconf=$(<~/.komodo/$acnameonly/$acnameonly.conf)
 
