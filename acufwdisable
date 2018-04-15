@@ -99,3 +99,5 @@ sudo ufw delete allow 11261
 sudo ufw delete allow 15032
 sudo ufw delete allow 14313
 sudo ufw delete allow 15261
+sudo ufw delete allow 15660
+sudo ufw delete allow 11295
