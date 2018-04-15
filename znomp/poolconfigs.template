@@ -1,5 +1,5 @@
 {
-    "enabled":false,
+    "enabled":true,
     "coin": "COINNAMEVAR.json",
     "address": "WALLETADDRVAR",
     "_comment_address": "pools komodo address; ex, RSXGTHQSqwcMw1vowKfEE7sQ8fAmv1tmso",
