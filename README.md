@@ -23,7 +23,7 @@ You will need to create a pubkey.txt file and place it in the **scaletest** dire
 ```shell
 pubkey=<yourpubkey>
 ```
-To get the pubkey you need to do validateaddress on an Raddress you have the private key for. (see [TXTEST-cli](#TXTEST-cli)) section below for an example of how to get a new address if you don't already have one you want to use.
+To get the pubkey you need to do validateaddress on an Raddress you have the private key for. (see [txtest-cli](#TXTEST-cli)) section below for an example of how to get a new address if you don't already have one you want to use.
 
 Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuuing. After importing the private key, you will need to restart your chains making sure pubkey.txt has been created.
 
