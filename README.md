@@ -23,13 +23,13 @@ You will need to create a pubkey.txt file and place it in the **scaletest** dire
 ```shell
 pubkey=<yourpubkey>
 ```
-*Detailed instructions for creating this forthcoming, but it is the same process as notary nodes follow to generate pubkey*
+To get the pubkey you need to do validateaddress on an Raddress you have the private key for. (see [TXTEST-cli](#TXTEST-cli)) section below for an example of how to get a new address if you don't already have one you want to use.
 
-Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuuing
+Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuuing. After importing the private key, you will need to restart your chains making sure pubkey.txt has been created.
 
 You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
 
-5-10 UTXO of 100 should be plenty.
+5-10 UTXO of 100 should be plenty. Make sure your Raddress is posted in the Signups Page so the operator can send funds.
 
 To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per node.
 
