@@ -7,12 +7,14 @@ Please sign up here: [Signup Sheet for Scaling Test](http://pad.supernet.org/Str
 ## Install Steps
 
 ```shell
-sudo apt-get install git`
+sudo apt-get install git
 git clone https://github.com/blackjok3rtt/scaletest.git
 cd scaletest
 ./buildkomodo.sh
 cd ~/scaletest
 ```
+
+When this is complete please refer to the section below for the role you are filling.
 
 ### For Transaction Blasters
 
@@ -21,10 +23,9 @@ You will need to create a pubkey.txt file and place it in the **scaletest** dire
 ```shell
 pubkey=<yourpubkey>
 ```
+*Detailed instructions for creating this forthcoming, but it is the same process as notary nodes follow to generate pubkey*
 
-(Detailed instructions for creating this forthcoming, but it is the same process as notary nodes follow to generate pubkey)
-
-Then run importprivkey on all the test assetchains (see assets-cli) before continuuing
+Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuuing
 
 You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
 
@@ -43,7 +44,7 @@ sh blastloop.sh
 ./mineassets
 ```
 
-### For Regular Node (Stats, etc)
+### For Regular Nodes (Stats, etc)
 ```shell
 ./sync_assets
 ```
@@ -82,7 +83,7 @@ Four files will need to be shared with the test organizer and/or committed to th
 
 
 ```shell
-`./genacs <numchains> <chainname> <supply>`
+./genacs <numchains> <chainname> <supply>
 ```
 
 File | Description
