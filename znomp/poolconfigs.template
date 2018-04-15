@@ -1,0 +1,40 @@
+{
+    "enabled":false,
+    "coin": "COINNAMEVAR.json",
+    "address": "WALLETADDRVAR",
+    "_comment_address": "pools komodo address; ex, RSXGTHQSqwcMw1vowKfEE7sQ8fAmv1tmso",
+    "zAddress": "",
+    "_comment_zAddress": "shielding not required in komodo, not used",
+    "tAddress": "WALLETADDRVAR",
+    "_comment_tAddress": "set to same as pools komodo address; ex, RSXGTHQSqwcMw1vowKfEE7sQ8fAmv1tmso",
+    "walletInterval": 1,
+    "_comment_walletInterval": "Used to cache komodo coin stats, shielding not performed.",
+    "rewardRecipients": {
+    },
+    "tlsOptions": {
+        "enabled": false
+    },
+    "paymentProcessing": {
+        "enabled": false
+    },
+    "ports": {
+        "STRATUMPORTVAR": {
+            "tls":false,
+            "diff": 2
+        }
+    },
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": RPCPORTVAR,
+            "user": "RPCUSERVAR",
+            "password": "RPCPASSVAR"
+        }
+    ],
+    "p2p": {
+        "enabled": false
+    },
+    "mposMode": {
+        "enabled": false
+    }
+}
