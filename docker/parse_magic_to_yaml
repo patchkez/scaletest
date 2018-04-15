@@ -1,0 +1,24 @@
+#!/bin/bash
+
+magic="../magic"
+yaml="data_test.yml"
+
+
+echo "  test:" >> ${yaml}
+
+IFS='
+'
+
+for asset in `cat ${magic}`;do
+  echo "======= ${asset} ========"
+  ASSET_NAME=`echo ${asset} | awk -F " " '{print $1}'`
+  SUPPLY=`echo ${asset} | awk -F " " '{ print $5}'`
+  PORTS=`echo ${asset} | awk -F " " '{print $2}' | sed 's/port\.//g'`
+  P2P_PORT=`echo ${PORTS} | awk -F "/" '{print $1}'`
+  RPC_PORT=`echo ${PORTS} | awk -F "/" '{print $2}'`
+
+  echo "    ${ASSET_NAME}" >> ${yaml}
+  echo "      ammount: ${SUPPLY}" >> ${yaml}
+  echo "      p2p_port: ${P2P_PORT}" >> ${yaml}
+  echo "      rpc_port: ${RPC_PORT}" >> ${yaml}
+done
