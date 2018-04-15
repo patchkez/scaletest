@@ -1,0 +1,33 @@
+#!/bin/bash
+walletaddress=RFAjKyE5nZFpwqf6D1igXkA4P3FH877xaJ
+
+magicfile=../magic
+coinsdir=./coins
+poolconfigdir=./pool_configs
+coinstpl=coins.template
+pooltpl=poolconfigs.template
+
+stratumport=20777
+
+cointemplate=$(<$coinstpl)
+pooltemplate=$(<$pooltpl)
+
+mkdir $coinsdir
+mkdir $poolconfigdir
+
+while read acname ports magic uknum acsupply ukword
+do
+    acnameonly=$(echo $acname | sed 's/://')
+    magicrev=$(echo $magic | sed 's/magic.//' | rev)
+
+    thisconf=$(<~/.komodo/$acnameonly/$acnameonly.conf)
+
+    rpcuser=$(echo $thisconf | grep -Po "rpcuser=(\S*)" | sed 's/rpcuser=//')
+    rpcpass=$(echo $thisconf | grep -Po "rpcpassword=(\S*)" | sed 's/rpcpassword=//')
+    rpcport=$(echo $thisconf | grep -Po "rpcport=(\S*)" | sed 's/rpcport=//')
+
+    echo "$cointemplate" | sed "s/COINNAMEVAR/$acnameonly/" | sed "s/MAGICREVVAR/$magicrev/" > $coinsdir/$acnameonly.json
+    echo "$pooltemplate" | sed "s/COINNAMEVAR/$acnameonly/" | sed "s/WALLETADDRVAR/$walletaddress/" | sed "s/STRATUMPORTVAR/$stratumport/" | sed "s/RPCPORTVAR/$rpcport/" | sed "s/RPCUSERVAR/$rpcuser/" | sed "s/RPCPASSVAR/$rpcpass/" > $poolconfigdir/$acnameonly.json
+
+    let "stratumport = $stratumport + 1"
+done < "$magicfile"
