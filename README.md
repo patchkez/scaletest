@@ -102,9 +102,9 @@ cd ~/scaletest/znomp/
 nano generate
 ```
 
-Edit the line `walletaddress=` and change the address to your pool wallet address` and save and exit
+Edit the line `walletaddress=` and change the address to your pool wallet address and save and exit
 
-```shell`
+```shell
 ./generate
 ```
 
