@@ -17,7 +17,7 @@ cd ~/scaletest
 
 When this is complete please refer to the section below for the role you are filling.
 
-### For Transaction Blasters
+### FOR ALL NODES
 
 You will need to create a pubkey.txt file and place it in the **scaletest** directory in the format.
 
@@ -31,6 +31,8 @@ Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli
 You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
 
 **Make sure your Raddress is posted in the Signups Page so the operator can send funds.**
+
+### For Transaction Blasters
 
 To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per node.
 
