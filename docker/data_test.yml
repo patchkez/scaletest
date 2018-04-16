@@ -1,405 +1,437 @@
   test:
-    TXTST:
-      ammount: 10000000
-      p2p_port: 10566
-      rpc_port: 10567
-    TXTST000:
-      ammount: 10000000
-      p2p_port: 11936
-      rpc_port: 11937
-    TXTST001:
-      ammount: 10000000
-      p2p_port: 12552
-      rpc_port: 12553
-    TXTST002:
-      ammount: 10000000
-      p2p_port: 12045
-      rpc_port: 12046
-    TXTST003:
-      ammount: 10000000
-      p2p_port: 14110
-      rpc_port: 14111
-    TXTST004:
-      ammount: 10000000
-      p2p_port: 11672
-      rpc_port: 11673
-    TXTST005:
-      ammount: 10000000
-      p2p_port: 9167
-      rpc_port: 9168
-    TXTST006:
-      ammount: 10000000
-      p2p_port: 11588
-      rpc_port: 11589
-    TXTST007:
-      ammount: 10000000
-      p2p_port: 10204
-      rpc_port: 10205
-    TXTST008:
-      ammount: 10000000
-      p2p_port: 13020
-      rpc_port: 13021
-    TXTST009:
-      ammount: 10000000
-      p2p_port: 12699
-      rpc_port: 12700
-    TXTST00a:
-      ammount: 10000000
-      p2p_port: 11644
-      rpc_port: 11645
-    TXTST00b:
-      ammount: 10000000
-      p2p_port: 11051
-      rpc_port: 11052
-    TXTST00c:
-      ammount: 10000000
-      p2p_port: 13691
-      rpc_port: 13692
-    TXTST00d:
-      ammount: 10000000
-      p2p_port: 14255
-      rpc_port: 14256
-    TXTST00e:
-      ammount: 10000000
-      p2p_port: 15348
-      rpc_port: 15349
-    TXTST00f:
-      ammount: 10000000
-      p2p_port: 11795
-      rpc_port: 11796
-    TXTST010:
-      ammount: 10000000
-      p2p_port: 8523
-      rpc_port: 8524
-    TXTST011:
-      ammount: 10000000
-      p2p_port: 8122
-      rpc_port: 8123
-    TXTST012:
-      ammount: 10000000
-      p2p_port: 15407
-      rpc_port: 15408
-    TXTST013:
-      ammount: 10000000
-      p2p_port: 13567
-      rpc_port: 13568
-    TXTST014:
-      ammount: 10000000
-      p2p_port: 14040
-      rpc_port: 14041
-    TXTST015:
-      ammount: 10000000
-      p2p_port: 9375
-      rpc_port: 9376
-    TXTST016:
-      ammount: 10000000
-      p2p_port: 10316
-      rpc_port: 10317
-    TXTST017:
-      ammount: 10000000
-      p2p_port: 11661
-      rpc_port: 11662
-    TXTST018:
-      ammount: 10000000
-      p2p_port: 13722
-      rpc_port: 13723
-    TXTST019:
-      ammount: 10000000
-      p2p_port: 13339
-      rpc_port: 13340
-    TXTST01a:
-      ammount: 10000000
-      p2p_port: 13875
-      rpc_port: 13876
-    TXTST01b:
-      ammount: 10000000
-      p2p_port: 10725
-      rpc_port: 10726
-    TXTST01c:
-      ammount: 10000000
-      p2p_port: 13695
-      rpc_port: 13696
-    TXTST01d:
-      ammount: 10000000
-      p2p_port: 8810
-      rpc_port: 8811
-    TXTST01e:
-      ammount: 10000000
-      p2p_port: 12945
-      rpc_port: 12946
-    TXTST01f:
-      ammount: 10000000
-      p2p_port: 8330
-      rpc_port: 8331
-    TXTST020:
-      ammount: 10000000
-      p2p_port: 8231
-      rpc_port: 8232
-    TXTST021:
-      ammount: 10000000
-      p2p_port: 11754
-      rpc_port: 11755
-    TXTST022:
-      ammount: 10000000
-      p2p_port: 8568
-      rpc_port: 8569
-    TXTST023:
-      ammount: 10000000
-      p2p_port: 9764
-      rpc_port: 9765
-    TXTST024:
-      ammount: 10000000
-      p2p_port: 14487
-      rpc_port: 14488
-    TXTST025:
-      ammount: 10000000
-      p2p_port: 11308
-      rpc_port: 11309
-    TXTST026:
-      ammount: 10000000
-      p2p_port: 14370
-      rpc_port: 14371
-    TXTST027:
-      ammount: 10000000
-      p2p_port: 15698
-      rpc_port: 15699
-    TXTST028:
-      ammount: 10000000
-      p2p_port: 15362
-      rpc_port: 15363
-    TXTST029:
-      ammount: 10000000
-      p2p_port: 11130
-      rpc_port: 11131
-    TXTST02a:
-      ammount: 10000000
-      p2p_port: 13773
-      rpc_port: 13774
-    TXTST02b:
-      ammount: 10000000
-      p2p_port: 13309
-      rpc_port: 13310
-    TXTST02c:
-      ammount: 10000000
-      p2p_port: 11932
-      rpc_port: 11933
-    TXTST02d:
-      ammount: 10000000
-      p2p_port: 11881
-      rpc_port: 11882
-    TXTST02e:
-      ammount: 10000000
-      p2p_port: 13219
-      rpc_port: 13220
-    TXTST02f:
-      ammount: 10000000
-      p2p_port: 14252
-      rpc_port: 14253
-    TXTST030:
-      ammount: 10000000
-      p2p_port: 10171
-      rpc_port: 10172
-    TXTST031:
-      ammount: 10000000
-      p2p_port: 15024
-      rpc_port: 15025
-    TXTST032:
-      ammount: 10000000
-      p2p_port: 14395
-      rpc_port: 14396
-    TXTST033:
-      ammount: 10000000
-      p2p_port: 12032
-      rpc_port: 12033
-    TXTST034:
-      ammount: 10000500
-      p2p_port: 15660
-      rpc_port: 15661
-    TXTST035:
-      ammount: 10000000
-      p2p_port: 11439
-      rpc_port: 11440
-    TXTST036:
-      ammount: 10000000
-      p2p_port: 15563
-      rpc_port: 15564
-    TXTST037:
-      ammount: 10000000
-      p2p_port: 12189
-      rpc_port: 12190
-    TXTST038:
-      ammount: 10000000
-      p2p_port: 11593
-      rpc_port: 11594
-    TXTST039:
-      ammount: 10000000
-      p2p_port: 10965
-      rpc_port: 10966
-    TXTST03a:
-      ammount: 10000001
-      p2p_port: 13251
-      rpc_port: 13252
-    TXTST03b:
-      ammount: 10000000
-      p2p_port: 12219
-      rpc_port: 12220
-    TXTST03c:
-      ammount: 10000000
-      p2p_port: 10199
-      rpc_port: 10200
-    TXTST03d:
-      ammount: 10000000
-      p2p_port: 15018
-      rpc_port: 15019
-    TXTST03e:
-      ammount: 10000000
-      p2p_port: 15287
-      rpc_port: 15288
-    TXTST03f:
-      ammount: 10000000
-      p2p_port: 10023
-      rpc_port: 10024
-    TXTST040:
-      ammount: 10000000
-      p2p_port: 14812
-      rpc_port: 14813
-    TXTST041:
-      ammount: 10000000
-      p2p_port: 14302
-      rpc_port: 14303
-    TXTST042:
-      ammount: 10000000
-      p2p_port: 12942
-      rpc_port: 12943
-    TXTST043:
-      ammount: 10000000
-      p2p_port: 8356
-      rpc_port: 8357
-    TXTST044:
-      ammount: 10000000
-      p2p_port: 9467
-      rpc_port: 9468
-    TXTST045:
-      ammount: 10000000
-      p2p_port: 15547
-      rpc_port: 15548
-    TXTST046:
-      ammount: 10000000
-      p2p_port: 10020
-      rpc_port: 10021
-    TXTST047:
-      ammount: 10000000
-      p2p_port: 15605
-      rpc_port: 15606
-    TXTST048:
-      ammount: 10000000
-      p2p_port: 11155
-      rpc_port: 11156
-    TXTST049:
-      ammount: 10000000
-      p2p_port: 12961
-      rpc_port: 12962
-    TXTST04a:
-      ammount: 10000001
-      p2p_port: 14234
-      rpc_port: 14235
-    TXTST04b:
-      ammount: 10000000
-      p2p_port: 10459
-      rpc_port: 10460
-    TXTST04c:
-      ammount: 10000000
-      p2p_port: 13907
-      rpc_port: 13908
-    TXTST04d:
-      ammount: 10000000
-      p2p_port: 14221
-      rpc_port: 14222
-    TXTST04e:
-      ammount: 10000000
-      p2p_port: 8663
-      rpc_port: 8664
-    TXTST04f:
-      ammount: 10000000
-      p2p_port: 13058
-      rpc_port: 13059
-    TXTST050:
-      ammount: 10000000
-      p2p_port: 12206
-      rpc_port: 12207
-    TXTST051:
-      ammount: 10000000
-      p2p_port: 10679
-      rpc_port: 10680
-    TXTST052:
-      ammount: 10000000
-      p2p_port: 15497
-      rpc_port: 15498
-    TXTST053:
-      ammount: 10000000
-      p2p_port: 14783
-      rpc_port: 14784
-    TXTST054:
-      ammount: 10000000
-      p2p_port: 10004
-      rpc_port: 10005
-    TXTST055:
-      ammount: 10000000
-      p2p_port: 13924
-      rpc_port: 13925
-    TXTST056:
-      ammount: 10000000
-      p2p_port: 10579
-      rpc_port: 10580
-    TXTST057:
-      ammount: 10000500
-      p2p_port: 11295
-      rpc_port: 11296
-    TXTST058:
-      ammount: 10000000
-      p2p_port: 10026
-      rpc_port: 10027
-    TXTST059:
-      ammount: 10000000
-      p2p_port: 11770
-      rpc_port: 11771
-    TXTST05a:
-      ammount: 10000000
-      p2p_port: 11623
-      rpc_port: 11624
-    TXTST05b:
-      ammount: 10000000
-      p2p_port: 10940
-      rpc_port: 10941
-    TXTST05c:
-      ammount: 10000000
-      p2p_port: 14718
-      rpc_port: 14719
-    TXTST05d:
-      ammount: 10000000
-      p2p_port: 10607
-      rpc_port: 10608
-    TXTST05e:
-      ammount: 10000000
-      p2p_port: 8091
-      rpc_port: 8092
-    TXTST05f:
-      ammount: 10000000
-      p2p_port: 15539
-      rpc_port: 15540
-    TXTST060:
-      ammount: 10000000
-      p2p_port: 11261
-      rpc_port: 11262
-    TXTST061:
-      ammount: 10000000
-      p2p_port: 15032
-      rpc_port: 15033
-    TXTST062:
-      ammount: 10000000
-      p2p_port: 14313
-      rpc_port: 14314
-    TXTST063:
-      ammount: 10000000
-      p2p_port: 15261
-      rpc_port: 15262
+    TXSCL:
+      ammount: 100000000
+      p2p_port: 11820
+      rpc_port: 11821
+    TXSCL000:
+      ammount: 100000000
+      p2p_port: 13272
+      rpc_port: 13273
+    TXSCL001:
+      ammount: 100000000
+      p2p_port: 11997
+      rpc_port: 11998
+    TXSCL002:
+      ammount: 100000000
+      p2p_port: 12739
+      rpc_port: 12740
+    TXSCL003:
+      ammount: 100000000
+      p2p_port: 15564
+      rpc_port: 15565
+    TXSCL004:
+      ammount: 100000000
+      p2p_port: 8160
+      rpc_port: 8161
+    TXSCL005:
+      ammount: 100000000
+      p2p_port: 13663
+      rpc_port: 13664
+    TXSCL006:
+      ammount: 100000000
+      p2p_port: 8457
+      rpc_port: 8458
+    TXSCL007:
+      ammount: 100000000
+      p2p_port: 15750
+      rpc_port: 15751
+    TXSCL008:
+      ammount: 100000000
+      p2p_port: 12561
+      rpc_port: 12562
+    TXSCL00a:
+      ammount: 100000000
+      p2p_port: 8594
+      rpc_port: 8595
+    TXSCL00b:
+      ammount: 100000000
+      p2p_port: 14497
+      rpc_port: 14498
+    TXSCL00c:
+      ammount: 100000000
+      p2p_port: 13513
+      rpc_port: 13514
+    TXSCL00d:
+      ammount: 100000000
+      p2p_port: 13250
+      rpc_port: 13251
+    TXSCL00e:
+      ammount: 100000000
+      p2p_port: 15705
+      rpc_port: 15706
+    TXSCL00f:
+      ammount: 100000000
+      p2p_port: 12034
+      rpc_port: 12035
+    TXSCL010:
+      ammount: 100000000
+      p2p_port: 8973
+      rpc_port: 8974
+    TXSCL011:
+      ammount: 100000000
+      p2p_port: 9472
+      rpc_port: 9473
+    TXSCL012:
+      ammount: 100000000
+      p2p_port: 15604
+      rpc_port: 15605
+    TXSCL013:
+      ammount: 100000000
+      p2p_port: 13995
+      rpc_port: 13996
+    TXSCL014:
+      ammount: 100000000
+      p2p_port: 10769
+      rpc_port: 10770
+    TXSCL015:
+      ammount: 100000000
+      p2p_port: 14641
+      rpc_port: 14642
+    TXSCL016:
+      ammount: 100000000
+      p2p_port: 15592
+      rpc_port: 15593
+    TXSCL017:
+      ammount: 100000000
+      p2p_port: 15046
+      rpc_port: 15047
+    TXSCL018:
+      ammount: 100000000
+      p2p_port: 11106
+      rpc_port: 11107
+    TXSCL019:
+      ammount: 100000000
+      p2p_port: 12614
+      rpc_port: 12615
+    TXSCL01a:
+      ammount: 100000000
+      p2p_port: 10584
+      rpc_port: 10585
+    TXSCL01b:
+      ammount: 100000000
+      p2p_port: 8555
+      rpc_port: 8556
+    TXSCL01c:
+      ammount: 100000000
+      p2p_port: 12887
+      rpc_port: 12888
+    TXSCL01d:
+      ammount: 100000000
+      p2p_port: 13677
+      rpc_port: 13678
+    TXSCL01e:
+      ammount: 100000000
+      p2p_port: 14188
+      rpc_port: 14189
+    TXSCL01f:
+      ammount: 100000000
+      p2p_port: 9595
+      rpc_port: 9596
+    TXSCL020:
+      ammount: 100000000
+      p2p_port: 12369
+      rpc_port: 12370
+    TXSCL021:
+      ammount: 100000000
+      p2p_port: 13399
+      rpc_port: 13400
+    TXSCL022:
+      ammount: 100000000
+      p2p_port: 11462
+      rpc_port: 11463
+    TXSCL023:
+      ammount: 100000000
+      p2p_port: 14020
+      rpc_port: 14021
+    TXSCL024:
+      ammount: 100000000
+      p2p_port: 14290
+      rpc_port: 14291
+    TXSCL025:
+      ammount: 100000000
+      p2p_port: 15264
+      rpc_port: 15265
+    TXSCL026:
+      ammount: 100000000
+      p2p_port: 10699
+      rpc_port: 10700
+    TXSCL027:
+      ammount: 100000000
+      p2p_port: 9005
+      rpc_port: 9006
+    TXSCL028:
+      ammount: 100000000
+      p2p_port: 15443
+      rpc_port: 15444
+    TXSCL029:
+      ammount: 100000000
+      p2p_port: 14233
+      rpc_port: 14234
+    TXSCL02a:
+      ammount: 100000000
+      p2p_port: 10183
+      rpc_port: 10184
+    TXSCL02b:
+      ammount: 100000000
+      p2p_port: 8438
+      rpc_port: 8439
+    TXSCL02c:
+      ammount: 100000000
+      p2p_port: 15069
+      rpc_port: 15070
+    TXSCL02d:
+      ammount: 100000001
+      p2p_port: 8038
+      rpc_port: 8039
+    TXSCL02e:
+      ammount: 100000000
+      p2p_port: 15776
+      rpc_port: 15777
+    TXSCL02f:
+      ammount: 100000000
+      p2p_port: 8914
+      rpc_port: 8915
+    TXSCL030:
+      ammount: 100000000
+      p2p_port: 15083
+      rpc_port: 15084
+    TXSCL031:
+      ammount: 100000000
+      p2p_port: 9137
+      rpc_port: 9138
+    TXSCL032:
+      ammount: 100000000
+      p2p_port: 15132
+      rpc_port: 15133
+    TXSCL033:
+      ammount: 100000000
+      p2p_port: 9145
+      rpc_port: 9146
+    TXSCL034:
+      ammount: 100000000
+      p2p_port: 8358
+      rpc_port: 8359
+    TXSCL035:
+      ammount: 100000000
+      p2p_port: 14505
+      rpc_port: 14506
+    TXSCL036:
+      ammount: 100000000
+      p2p_port: 10862
+      rpc_port: 10863
+    TXSCL037:
+      ammount: 100000000
+      p2p_port: 12772
+      rpc_port: 12773
+    TXSCL038:
+      ammount: 100000000
+      p2p_port: 11177
+      rpc_port: 11178
+    TXSCL039:
+      ammount: 100000000
+      p2p_port: 13042
+      rpc_port: 13043
+    TXSCL03a:
+      ammount: 100000000
+      p2p_port: 14984
+      rpc_port: 14985
+    TXSCL03b:
+      ammount: 100000000
+      p2p_port: 15626
+      rpc_port: 15627
+    TXSCL03c:
+      ammount: 100000000
+      p2p_port: 14366
+      rpc_port: 14367
+    TXSCL03d:
+      ammount: 100000000
+      p2p_port: 8793
+      rpc_port: 8794
+    TXSCL03e:
+      ammount: 100000000
+      p2p_port: 9293
+      rpc_port: 9294
+    TXSCL03f:
+      ammount: 100000000
+      p2p_port: 11828
+      rpc_port: 11829
+    TXSCL040:
+      ammount: 100000000
+      p2p_port: 14637
+      rpc_port: 14638
+    TXSCL041:
+      ammount: 100000000
+      p2p_port: 15489
+      rpc_port: 15490
+    TXSCL042:
+      ammount: 100000000
+      p2p_port: 15378
+      rpc_port: 15379
+    TXSCL044:
+      ammount: 100000000
+      p2p_port: 15243
+      rpc_port: 15244
+    TXSCL045:
+      ammount: 100000000
+      p2p_port: 10524
+      rpc_port: 10525
+    TXSCL046:
+      ammount: 100000000
+      p2p_port: 12924
+      rpc_port: 12925
+    TXSCL047:
+      ammount: 100000000
+      p2p_port: 14885
+      rpc_port: 14886
+    TXSCL048:
+      ammount: 100000000
+      p2p_port: 13528
+      rpc_port: 13529
+    TXSCL049:
+      ammount: 100000000
+      p2p_port: 11181
+      rpc_port: 11182
+    TXSCL04a:
+      ammount: 100000000
+      p2p_port: 13893
+      rpc_port: 13894
+    TXSCL04b:
+      ammount: 100000000
+      p2p_port: 12872
+      rpc_port: 12873
+    TXSCL04c:
+      ammount: 100000000
+      p2p_port: 9443
+      rpc_port: 9444
+    TXSCL04d:
+      ammount: 100000000
+      p2p_port: 9725
+      rpc_port: 9726
+    TXSCL04e:
+      ammount: 100000000
+      p2p_port: 10053
+      rpc_port: 10054
+    TXSCL04f:
+      ammount: 100000000
+      p2p_port: 14330
+      rpc_port: 14331
+    TXSCL050:
+      ammount: 100000000
+      p2p_port: 11145
+      rpc_port: 11146
+    TXSCL051:
+      ammount: 100000000
+      p2p_port: 13771
+      rpc_port: 13772
+    TXSCL052:
+      ammount: 100000000
+      p2p_port: 9659
+      rpc_port: 9660
+    TXSCL053:
+      ammount: 100000000
+      p2p_port: 13700
+      rpc_port: 13701
+    TXSCL054:
+      ammount: 100000000
+      p2p_port: 8244
+      rpc_port: 8245
+    TXSCL055:
+      ammount: 100000000
+      p2p_port: 9671
+      rpc_port: 9672
+    TXSCL056:
+      ammount: 100000000
+      p2p_port: 14113
+      rpc_port: 14114
+    TXSCL057:
+      ammount: 100000000
+      p2p_port: 8235
+      rpc_port: 8236
+    TXSCL058:
+      ammount: 100000000
+      p2p_port: 10242
+      rpc_port: 10243
+    TXSCL059:
+      ammount: 100000000
+      p2p_port: 10624
+      rpc_port: 10625
+    TXSCL05a:
+      ammount: 100000000
+      p2p_port: 15076
+      rpc_port: 15077
+    TXSCL05b:
+      ammount: 100000000
+      p2p_port: 15514
+      rpc_port: 15515
+    TXSCL05c:
+      ammount: 100000000
+      p2p_port: 9624
+      rpc_port: 9625
+    TXSCL05d:
+      ammount: 100000000
+      p2p_port: 11983
+      rpc_port: 11984
+    TXSCL05e:
+      ammount: 100000000
+      p2p_port: 10367
+      rpc_port: 10368
+    TXSCL05f:
+      ammount: 100000000
+      p2p_port: 10060
+      rpc_port: 10061
+    TXSCL060:
+      ammount: 100000000
+      p2p_port: 8886
+      rpc_port: 8887
+    TXSCL061:
+      ammount: 100000000
+      p2p_port: 13417
+      rpc_port: 13418
+    TXSCL062:
+      ammount: 100000000
+      p2p_port: 13947
+      rpc_port: 13948
+    TXSCL063:
+      ammount: 100000000
+      p2p_port: 13004
+      rpc_port: 13005
+    TXSCL064:
+      ammount: 100000001
+      p2p_port: 14899
+      rpc_port: 14900
+    TXSCL065:
+      ammount: 100000000
+      p2p_port: 10515
+      rpc_port: 10516
+    TXSCL066:
+      ammount: 100000000
+      p2p_port: 10236
+      rpc_port: 10237
+    TXSCL067:
+      ammount: 100000000
+      p2p_port: 14752
+      rpc_port: 14753
+    TXSCL068:
+      ammount: 100000000
+      p2p_port: 11562
+      rpc_port: 11563
+    TXSCL069:
+      ammount: 100000000
+      p2p_port: 10600
+      rpc_port: 10601
+    TXSCL06a:
+      ammount: 100000000
+      p2p_port: 9860
+      rpc_port: 9861
+    TXSCL06b:
+      ammount: 100000000
+      p2p_port: 13425
+      rpc_port: 13426
+    TXSCL06c:
+      ammount: 100000000
+      p2p_port: 13846
+      rpc_port: 13847
+    TXSCL06d:
+      ammount: 100000000
+      p2p_port: 14456
+      rpc_port: 14457
