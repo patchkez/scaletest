@@ -1,5 +1,5 @@
 #!/bin/bash
-source pubkey
+source pubkey.txt
 source seedip
 source coinlist
 count=0
