@@ -1,0 +1,393 @@
+  test:
+    TXTEST:
+      ammount: 1000000
+      p2p_port: 11480
+      rpc_port: 11481
+    TXTEST000:
+      ammount: 1000000
+      p2p_port: 14017
+      rpc_port: 14018
+    TXTEST001:
+      ammount: 1000000
+      p2p_port: 10281
+      rpc_port: 10282
+    TXTEST002:
+      ammount: 1000000
+      p2p_port: 13531
+      rpc_port: 13532
+    TXTEST003:
+      ammount: 1000000
+      p2p_port: 9210
+      rpc_port: 9211
+    TXTEST004:
+      ammount: 1000000
+      p2p_port: 14444
+      rpc_port: 14445
+    TXTEST005:
+      ammount: 1000000
+      p2p_port: 11771
+      rpc_port: 11772
+    TXTEST006:
+      ammount: 1000000
+      p2p_port: 8021
+      rpc_port: 8022
+    TXTEST007:
+      ammount: 1000000
+      p2p_port: 14850
+      rpc_port: 14851
+    TXTEST008:
+      ammount: 1000000
+      p2p_port: 9301
+      rpc_port: 9302
+    TXTEST009:
+      ammount: 1000000
+      p2p_port: 10131
+      rpc_port: 10132
+    TXTEST00a:
+      ammount: 1000000
+      p2p_port: 9341
+      rpc_port: 9342
+    TXTEST00c:
+      ammount: 1000000
+      p2p_port: 14326
+      rpc_port: 14327
+    TXTEST00d:
+      ammount: 1000000
+      p2p_port: 14913
+      rpc_port: 14914
+    TXTEST00e:
+      ammount: 1000000
+      p2p_port: 15737
+      rpc_port: 15738
+    TXTEST00f:
+      ammount: 1000000
+      p2p_port: 8068
+      rpc_port: 8069
+    TXTEST010:
+      ammount: 1000000
+      p2p_port: 12184
+      rpc_port: 12185
+    TXTEST011:
+      ammount: 1000000
+      p2p_port: 12052
+      rpc_port: 12053
+    TXTEST012:
+      ammount: 1000000
+      p2p_port: 12356
+      rpc_port: 12357
+    TXTEST013:
+      ammount: 1000000
+      p2p_port: 13208
+      rpc_port: 13209
+    TXTEST014:
+      ammount: 1000000
+      p2p_port: 8337
+      rpc_port: 8338
+    TXTEST015:
+      ammount: 1000000
+      p2p_port: 12673
+      rpc_port: 12674
+    TXTEST017:
+      ammount: 1000000
+      p2p_port: 15341
+      rpc_port: 15342
+    TXTEST018:
+      ammount: 1000000
+      p2p_port: 9309
+      rpc_port: 9310
+    TXTEST019:
+      ammount: 1000000
+      p2p_port: 11469
+      rpc_port: 11470
+    TXTEST01a:
+      ammount: 1000000
+      p2p_port: 12270
+      rpc_port: 12271
+    TXTEST01b:
+      ammount: 1000000
+      p2p_port: 10834
+      rpc_port: 10835
+    TXTEST01c:
+      ammount: 1000000
+      p2p_port: 13368
+      rpc_port: 13369
+    TXTEST01d:
+      ammount: 1000000
+      p2p_port: 11044
+      rpc_port: 11045
+    TXTEST01e:
+      ammount: 1000000
+      p2p_port: 11754
+      rpc_port: 11755
+    TXTEST01f:
+      ammount: 1000000
+      p2p_port: 15616
+      rpc_port: 15617
+    TXTEST020:
+      ammount: 1000000
+      p2p_port: 14665
+      rpc_port: 14666
+    TXTEST021:
+      ammount: 1000000
+      p2p_port: 11635
+      rpc_port: 11636
+    TXTEST022:
+      ammount: 1000000
+      p2p_port: 10291
+      rpc_port: 10292
+    TXTEST023:
+      ammount: 1000000
+      p2p_port: 9995
+      rpc_port: 9996
+    TXTEST024:
+      ammount: 1000000
+      p2p_port: 8059
+      rpc_port: 8060
+    TXTEST026:
+      ammount: 1000000
+      p2p_port: 9039
+      rpc_port: 9040
+    TXTEST027:
+      ammount: 1000000
+      p2p_port: 13059
+      rpc_port: 13060
+    TXTEST028:
+      ammount: 1000000
+      p2p_port: 8219
+      rpc_port: 8220
+    TXTEST029:
+      ammount: 1000000
+      p2p_port: 10714
+      rpc_port: 10715
+    TXTEST02a:
+      ammount: 1000000
+      p2p_port: 9165
+      rpc_port: 9166
+    TXTEST02b:
+      ammount: 1000000
+      p2p_port: 9369
+      rpc_port: 9370
+    TXTEST02c:
+      ammount: 1000000
+      p2p_port: 14378
+      rpc_port: 14379
+    TXTEST02d:
+      ammount: 1000000
+      p2p_port: 15573
+      rpc_port: 15574
+    TXTEST02e:
+      ammount: 1000001
+      p2p_port: 14663
+      rpc_port: 14664
+    TXTEST02f:
+      ammount: 1000000
+      p2p_port: 12081
+      rpc_port: 12082
+    TXTEST030:
+      ammount: 1000000
+      p2p_port: 9526
+      rpc_port: 9527
+    TXTEST031:
+      ammount: 1000000
+      p2p_port: 14211
+      rpc_port: 14212
+    TXTEST032:
+      ammount: 1000000
+      p2p_port: 15156
+      rpc_port: 15157
+    TXTEST033:
+      ammount: 1000000
+      p2p_port: 13229
+      rpc_port: 13230
+    TXTEST034:
+      ammount: 1000000
+      p2p_port: 14200
+      rpc_port: 14201
+    TXTEST035:
+      ammount: 1000000
+      p2p_port: 14633
+      rpc_port: 14634
+    TXTEST036:
+      ammount: 1000000
+      p2p_port: 14769
+      rpc_port: 14770
+    TXTEST037:
+      ammount: 1000000
+      p2p_port: 12786
+      rpc_port: 12787
+    TXTEST038:
+      ammount: 1000000
+      p2p_port: 10651
+      rpc_port: 10652
+    TXTEST039:
+      ammount: 1000000
+      p2p_port: 12129
+      rpc_port: 12130
+    TXTEST03a:
+      ammount: 1000000
+      p2p_port: 9670
+      rpc_port: 9671
+    TXTEST03b:
+      ammount: 1000000
+      p2p_port: 12820
+      rpc_port: 12821
+    TXTEST03c:
+      ammount: 1000000
+      p2p_port: 8108
+      rpc_port: 8109
+    TXTEST03d:
+      ammount: 1000000
+      p2p_port: 11627
+      rpc_port: 11628
+    TXTEST03e:
+      ammount: 1000000
+      p2p_port: 10672
+      rpc_port: 10673
+    TXTEST03f:
+      ammount: 1000001
+      p2p_port: 10838
+      rpc_port: 10839
+    TXTEST040:
+      ammount: 1000000
+      p2p_port: 13760
+      rpc_port: 13761
+    TXTEST041:
+      ammount: 1000000
+      p2p_port: 12981
+      rpc_port: 12982
+    TXTEST042:
+      ammount: 1000000
+      p2p_port: 10921
+      rpc_port: 10922
+    TXTEST043:
+      ammount: 1000000
+      p2p_port: 11420
+      rpc_port: 11421
+    TXTEST044:
+      ammount: 1000000
+      p2p_port: 9970
+      rpc_port: 9971
+    TXTEST045:
+      ammount: 1000000
+      p2p_port: 14826
+      rpc_port: 14827
+    TXTEST046:
+      ammount: 1000000
+      p2p_port: 15362
+      rpc_port: 15363
+    TXTEST047:
+      ammount: 1000001
+      p2p_port: 10566
+      rpc_port: 10567
+    TXTEST048:
+      ammount: 1000000
+      p2p_port: 10943
+      rpc_port: 10944
+    TXTEST049:
+      ammount: 1000000
+      p2p_port: 10206
+      rpc_port: 10207
+    TXTEST04a:
+      ammount: 1000000
+      p2p_port: 14541
+      rpc_port: 14542
+    TXTEST04b:
+      ammount: 1000001
+      p2p_port: 13701
+      rpc_port: 13702
+    TXTEST04c:
+      ammount: 1000000
+      p2p_port: 9034
+      rpc_port: 9035
+    TXTEST04d:
+      ammount: 1000000
+      p2p_port: 14692
+      rpc_port: 14693
+    TXTEST04e:
+      ammount: 1000000
+      p2p_port: 12559
+      rpc_port: 12560
+    TXTEST04f:
+      ammount: 1000000
+      p2p_port: 8381
+      rpc_port: 8382
+    TXTEST050:
+      ammount: 1000000
+      p2p_port: 12734
+      rpc_port: 12735
+    TXTEST051:
+      ammount: 1000000
+      p2p_port: 15559
+      rpc_port: 15560
+    TXTEST052:
+      ammount: 1000000
+      p2p_port: 8939
+      rpc_port: 8940
+    TXTEST053:
+      ammount: 1000000
+      p2p_port: 14611
+      rpc_port: 14612
+    TXTEST054:
+      ammount: 1000000
+      p2p_port: 9809
+      rpc_port: 9810
+    TXTEST055:
+      ammount: 1000000
+      p2p_port: 13897
+      rpc_port: 13898
+    TXTEST056:
+      ammount: 1000000
+      p2p_port: 9106
+      rpc_port: 9107
+    TXTEST057:
+      ammount: 1000000
+      p2p_port: 9207
+      rpc_port: 9208
+    TXTEST058:
+      ammount: 1000000
+      p2p_port: 9120
+      rpc_port: 9121
+    TXTEST059:
+      ammount: 1000000
+      p2p_port: 9713
+      rpc_port: 9714
+    TXTEST05a:
+      ammount: 1000000
+      p2p_port: 8886
+      rpc_port: 8887
+    TXTEST05b:
+      ammount: 1000000
+      p2p_port: 14374
+      rpc_port: 14375
+    TXTEST05c:
+      ammount: 1000000
+      p2p_port: 8883
+      rpc_port: 8884
+    TXTEST05d:
+      ammount: 1000000
+      p2p_port: 12654
+      rpc_port: 12655
+    TXTEST05e:
+      ammount: 1000000
+      p2p_port: 10407
+      rpc_port: 10408
+    TXTEST05f:
+      ammount: 1000000
+      p2p_port: 14098
+      rpc_port: 14099
+    TXTEST060:
+      ammount: 1000000
+      p2p_port: 8786
+      rpc_port: 8787
+    TXTEST061:
+      ammount: 1000000
+      p2p_port: 12725
+      rpc_port: 12726
+    TXTEST062:
+      ammount: 1000000
+      p2p_port: 10528
+      rpc_port: 10529
+    TXTEST063:
+      ammount: 1000000
+      p2p_port: 11040
+      rpc_port: 11041

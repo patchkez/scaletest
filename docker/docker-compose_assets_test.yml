@@ -1,0 +1,2368 @@
+# vim: ts=2 sw=2 et
+version: '3'
+
+services:
+  TXTEST031:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14212:14212"
+      - "14211:14211"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14211
+      - ASSET_NAME=TXTEST031
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST031 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST013:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13209:13209"
+      - "13208:13208"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13208
+      - ASSET_NAME=TXTEST013
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST013 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST047:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10567:10567"
+      - "10566:10566"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10566
+      - ASSET_NAME=TXTEST047
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST047 
+      -ac_supply=1000001 
+      -addnode=54.36.176.84"
+  
+  TXTEST03d:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11628:11628"
+      - "11627:11627"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11627
+      - ASSET_NAME=TXTEST03d
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST03d 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST010:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12185:12185"
+      - "12184:12184"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12184
+      - ASSET_NAME=TXTEST010
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST010 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST033:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13230:13230"
+      - "13229:13229"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13229
+      - ASSET_NAME=TXTEST033
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST033 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST002:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13532:13532"
+      - "13531:13531"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13531
+      - ASSET_NAME=TXTEST002
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST002 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST053:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14612:14612"
+      - "14611:14611"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14611
+      - ASSET_NAME=TXTEST053
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST053 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST051:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:15560:15560"
+      - "15559:15559"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=15559
+      - ASSET_NAME=TXTEST051
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST051 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST060:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8787:8787"
+      - "8786:8786"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8786
+      - ASSET_NAME=TXTEST060
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST060 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST007:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14851:14851"
+      - "14850:14850"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14850
+      - ASSET_NAME=TXTEST007
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST007 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST005:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11772:11772"
+      - "11771:11771"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11771
+      - ASSET_NAME=TXTEST005
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST005 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST04b:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13702:13702"
+      - "13701:13701"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13701
+      - ASSET_NAME=TXTEST04b
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST04b 
+      -ac_supply=1000001 
+      -addnode=54.36.176.84"
+  
+  TXTEST05b:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14375:14375"
+      - "14374:14374"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14374
+      - ASSET_NAME=TXTEST05b
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST05b 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST019:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11470:11470"
+      - "11469:11469"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11469
+      - ASSET_NAME=TXTEST019
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST019 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST05d:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12655:12655"
+      - "12654:12654"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12654
+      - ASSET_NAME=TXTEST05d
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST05d 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST01c:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13369:13369"
+      - "13368:13368"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13368
+      - ASSET_NAME=TXTEST01c
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST01c 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST04f:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8382:8382"
+      - "8381:8381"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8381
+      - ASSET_NAME=TXTEST04f
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST04f 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST05a:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8887:8887"
+      - "8886:8886"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8886
+      - ASSET_NAME=TXTEST05a
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST05a 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST052:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8940:8940"
+      - "8939:8939"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8939
+      - ASSET_NAME=TXTEST052
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST052 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST018:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9310:9310"
+      - "9309:9309"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9309
+      - ASSET_NAME=TXTEST018
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST018 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST022:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10292:10292"
+      - "10291:10291"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10291
+      - ASSET_NAME=TXTEST022
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST022 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST034:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14201:14201"
+      - "14200:14200"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14200
+      - ASSET_NAME=TXTEST034
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST034 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST030:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9527:9527"
+      - "9526:9526"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9526
+      - ASSET_NAME=TXTEST030
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST030 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST015:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12674:12674"
+      - "12673:12673"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12673
+      - ASSET_NAME=TXTEST015
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST015 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST004:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14445:14445"
+      - "14444:14444"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14444
+      - ASSET_NAME=TXTEST004
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST004 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST024:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8060:8060"
+      - "8059:8059"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8059
+      - ASSET_NAME=TXTEST024
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST024 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST02e:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14664:14664"
+      - "14663:14663"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14663
+      - ASSET_NAME=TXTEST02e
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST02e 
+      -ac_supply=1000001 
+      -addnode=54.36.176.84"
+  
+  TXTEST05c:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8884:8884"
+      - "8883:8883"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8883
+      - ASSET_NAME=TXTEST05c
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST05c 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST02d:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:15574:15574"
+      - "15573:15573"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=15573
+      - ASSET_NAME=TXTEST02d
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST02d 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST055:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13898:13898"
+      - "13897:13897"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13897
+      - ASSET_NAME=TXTEST055
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST055 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST00e:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:15738:15738"
+      - "15737:15737"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=15737
+      - ASSET_NAME=TXTEST00e
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST00e 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST036:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14770:14770"
+      - "14769:14769"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14769
+      - ASSET_NAME=TXTEST036
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST036 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST042:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10922:10922"
+      - "10921:10921"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10921
+      - ASSET_NAME=TXTEST042
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST042 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST035:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14634:14634"
+      - "14633:14633"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14633
+      - ASSET_NAME=TXTEST035
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST035 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST01f:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:15617:15617"
+      - "15616:15616"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=15616
+      - ASSET_NAME=TXTEST01f
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST01f 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST03f:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10839:10839"
+      - "10838:10838"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10838
+      - ASSET_NAME=TXTEST03f
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST03f 
+      -ac_supply=1000001 
+      -addnode=54.36.176.84"
+  
+  TXTEST008:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9302:9302"
+      - "9301:9301"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9301
+      - ASSET_NAME=TXTEST008
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST008 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST003:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9211:9211"
+      - "9210:9210"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9210
+      - ASSET_NAME=TXTEST003
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST003 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST038:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10652:10652"
+      - "10651:10651"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10651
+      - ASSET_NAME=TXTEST038
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST038 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST049:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10207:10207"
+      - "10206:10206"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10206
+      - ASSET_NAME=TXTEST049
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST049 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST050:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12735:12735"
+      - "12734:12734"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12734
+      - ASSET_NAME=TXTEST050
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST050 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST043:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11421:11421"
+      - "11420:11420"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11420
+      - ASSET_NAME=TXTEST043
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST043 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST039:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12130:12130"
+      - "12129:12129"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12129
+      - ASSET_NAME=TXTEST039
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST039 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST014:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8338:8338"
+      - "8337:8337"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8337
+      - ASSET_NAME=TXTEST014
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST014 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST02f:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12082:12082"
+      - "12081:12081"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12081
+      - ASSET_NAME=TXTEST02f
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST02f 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST012:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12357:12357"
+      - "12356:12356"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12356
+      - ASSET_NAME=TXTEST012
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST012 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST05e:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10408:10408"
+      - "10407:10407"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10407
+      - ASSET_NAME=TXTEST05e
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST05e 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST040:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13761:13761"
+      - "13760:13760"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13760
+      - ASSET_NAME=TXTEST040
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST040 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST056:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9107:9107"
+      - "9106:9106"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9106
+      - ASSET_NAME=TXTEST056
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST056 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST00d:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14914:14914"
+      - "14913:14913"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14913
+      - ASSET_NAME=TXTEST00d
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST00d 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST046:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:15363:15363"
+      - "15362:15362"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=15362
+      - ASSET_NAME=TXTEST046
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST046 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST027:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:13060:13060"
+      - "13059:13059"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=13059
+      - ASSET_NAME=TXTEST027
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST027 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST01e:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11755:11755"
+      - "11754:11754"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11754
+      - ASSET_NAME=TXTEST01e
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST01e 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST00a:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9342:9342"
+      - "9341:9341"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9341
+      - ASSET_NAME=TXTEST00a
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST00a 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST03a:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9671:9671"
+      - "9670:9670"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9670
+      - ASSET_NAME=TXTEST03a
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST03a 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST01b:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10835:10835"
+      - "10834:10834"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10834
+      - ASSET_NAME=TXTEST01b
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST01b 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST03b:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12821:12821"
+      - "12820:12820"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12820
+      - ASSET_NAME=TXTEST03b
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST03b 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST04c:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9035:9035"
+      - "9034:9034"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9034
+      - ASSET_NAME=TXTEST04c
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST04c 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST063:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11041:11041"
+      - "11040:11040"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11040
+      - ASSET_NAME=TXTEST063
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST063 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST00f:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8069:8069"
+      - "8068:8068"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8068
+      - ASSET_NAME=TXTEST00f
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST00f 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST01a:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12271:12271"
+      - "12270:12270"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12270
+      - ASSET_NAME=TXTEST01a
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST01a 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST020:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14666:14666"
+      - "14665:14665"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14665
+      - ASSET_NAME=TXTEST020
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST020 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST03e:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10673:10673"
+      - "10672:10672"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10672
+      - ASSET_NAME=TXTEST03e
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST03e 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11481:11481"
+      - "11480:11480"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11480
+      - ASSET_NAME=TXTEST
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST000:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14018:14018"
+      - "14017:14017"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14017
+      - ASSET_NAME=TXTEST000
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST000 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST048:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10944:10944"
+      - "10943:10943"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10943
+      - ASSET_NAME=TXTEST048
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST048 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST04e:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12560:12560"
+      - "12559:12559"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12559
+      - ASSET_NAME=TXTEST04e
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST04e 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST009:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10132:10132"
+      - "10131:10131"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10131
+      - ASSET_NAME=TXTEST009
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST009 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST062:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10529:10529"
+      - "10528:10528"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10528
+      - ASSET_NAME=TXTEST062
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST062 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST02c:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14379:14379"
+      - "14378:14378"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14378
+      - ASSET_NAME=TXTEST02c
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST02c 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST057:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9208:9208"
+      - "9207:9207"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9207
+      - ASSET_NAME=TXTEST057
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST057 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST02a:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9166:9166"
+      - "9165:9165"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9165
+      - ASSET_NAME=TXTEST02a
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST02a 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST028:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8220:8220"
+      - "8219:8219"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8219
+      - ASSET_NAME=TXTEST028
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST028 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST011:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12053:12053"
+      - "12052:12052"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12052
+      - ASSET_NAME=TXTEST011
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST011 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST02b:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9370:9370"
+      - "9369:9369"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9369
+      - ASSET_NAME=TXTEST02b
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST02b 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST044:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9971:9971"
+      - "9970:9970"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9970
+      - ASSET_NAME=TXTEST044
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST044 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST006:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8022:8022"
+      - "8021:8021"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8021
+      - ASSET_NAME=TXTEST006
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST006 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST001:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10282:10282"
+      - "10281:10281"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10281
+      - ASSET_NAME=TXTEST001
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST001 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST04d:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14693:14693"
+      - "14692:14692"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14692
+      - ASSET_NAME=TXTEST04d
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST04d 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST05f:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14099:14099"
+      - "14098:14098"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14098
+      - ASSET_NAME=TXTEST05f
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST05f 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST017:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:15342:15342"
+      - "15341:15341"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=15341
+      - ASSET_NAME=TXTEST017
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST017 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST026:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9040:9040"
+      - "9039:9039"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9039
+      - ASSET_NAME=TXTEST026
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST026 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST041:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12982:12982"
+      - "12981:12981"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12981
+      - ASSET_NAME=TXTEST041
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST041 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST054:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9810:9810"
+      - "9809:9809"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9809
+      - ASSET_NAME=TXTEST054
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST054 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST03c:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:8109:8109"
+      - "8108:8108"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=8108
+      - ASSET_NAME=TXTEST03c
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST03c 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST045:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14827:14827"
+      - "14826:14826"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14826
+      - ASSET_NAME=TXTEST045
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST045 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST032:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:15157:15157"
+      - "15156:15156"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=15156
+      - ASSET_NAME=TXTEST032
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST032 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST04a:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14542:14542"
+      - "14541:14541"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14541
+      - ASSET_NAME=TXTEST04a
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST04a 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST061:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12726:12726"
+      - "12725:12725"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12725
+      - ASSET_NAME=TXTEST061
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST061 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST059:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9714:9714"
+      - "9713:9713"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9713
+      - ASSET_NAME=TXTEST059
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST059 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST021:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11636:11636"
+      - "11635:11635"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11635
+      - ASSET_NAME=TXTEST021
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST021 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST023:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9996:9996"
+      - "9995:9995"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9995
+      - ASSET_NAME=TXTEST023
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST023 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST058:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:9121:9121"
+      - "9120:9120"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=9120
+      - ASSET_NAME=TXTEST058
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST058 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST037:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:12787:12787"
+      - "12786:12786"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=12786
+      - ASSET_NAME=TXTEST037
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST037 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST00c:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:14327:14327"
+      - "14326:14326"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=14326
+      - ASSET_NAME=TXTEST00c
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST00c 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST01d:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:11045:11045"
+      - "11044:11044"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=11044
+      - ASSET_NAME=TXTEST01d
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST01d 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+  TXTEST029:
+    image: kmdplatform_komodo
+    network_mode: "host" 
+    ports:
+      - "127.0.0.1:10715:10715"
+      - "10714:10714"
+    volumes:
+      - komodo-data:/home/komodo/.komodo
+      - shared-data:/home/komodo/.shared:ro
+    environment:
+      - ASSET_RPC_USER=${RPC_USER}
+      - ASSET_RPC_PASSWORD=${RPC_PASSWORD}
+      - ASSET_RPC_WORKQUEUE=64
+      - ASSET_BIND=127.0.0.1
+      - ASSET_RPC_BIND=127.0.0.1
+      - ASSET_RPC_ALLOWIP=0.0.0.0
+      - ASSET_RPC_PORT=10714
+      - ASSET_NAME=TXTEST029
+    command: > 
+      bash -c "komodod -pubkey=<test_btc_pubkey_replace_me>
+      -ac_name=TXTEST029 
+      -ac_supply=1000000 
+      -addnode=54.36.176.84"
+  
+
+volumes:
+  komodo-data:
+    driver_opts:
+      type: none
+      device: ${KOMODO_DATA}
+      o: bind
+  shared-data:
+    driver_opts:
+      type: none
+      device: ${SHARED_DATA}
+      o: bind
