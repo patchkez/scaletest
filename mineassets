@@ -1,4 +1,5 @@
 #!/bin/bash
+source pubkey
 source seedip
 source coinlist
 count=0
@@ -10,7 +11,7 @@ do
   supply=`expr "$all" : '.* \(.*\)'`
   if [ "$name" != "" ]
     then
-     ~/komodo/src/komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen  &
+     ~/komodo/src/komodod -pubkey=$pubkey -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen  &
      sleep $delay
     fi
   count=$(( $count +1 ))
