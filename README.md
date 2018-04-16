@@ -5,7 +5,7 @@ This repo contains tools for easy setup to participate in the scaling test.
 Please sign up here: [Signup Sheet for Scaling Test](http://pad.supernet.org/Stress_Test_Signups)
 
 ## Install Steps
-These steps are for installing on an empty server/vps. If you are using a testnet notary don't build komodo, just make sure you are on JL777 branch, which you should be already. The scripts will be compaitable. There is also a docker folder, from PatchKez that will generate all these assetchains into docker containers. If you want to do it this way wait for more information, I haven't tested these yet. 
+These steps are for installing on an empty server/vps. If you are using a testnet notary don't build komodo, just make sure you are on `mergemaster` branch, which you should be already. The scripts will be compaitable. There is also a docker folder, from PatchKez that will generate all these assetchains into docker containers. If you want to do it this way wait for more information, I haven't tested these yet. 
 
 ```shell
 sudo apt-get install git
