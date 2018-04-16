@@ -5,6 +5,7 @@ This repo contains tools for easy setup to participate in the scaling test.
 Please sign up here: [Signup Sheet for Scaling Test](http://pad.supernet.org/Stress_Test_Signups)
 
 ## Install Steps
+These steps are for installing on an empty server/vps. If you are using a testnet notary don't build komodo, just make sure you are on JL777 branch, which you should be already. The scripts will be compaitable. There is also a docker folder, from PatchKez that will generate all these assetchains into docker containers. If you want to do it this way wait for more information, I haven't tested these yet. 
 
 ```shell
 sudo apt-get install git
@@ -29,7 +30,7 @@ Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli
 
 You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
 
-5-10 UTXO of 100 should be plenty. Make sure your Raddress is posted in the Signups Page so the operator can send funds.
+**Make sure your Raddress is posted in the Signups Page so the operator can send funds.**
 
 To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per node.
 
