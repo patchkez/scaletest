@@ -8,7 +8,6 @@ sudo ufw delete allow 13663
 sudo ufw delete allow 8457
 sudo ufw delete allow 15750
 sudo ufw delete allow 12561
-sudo ufw delete allow 11340
 sudo ufw delete allow 8594
 sudo ufw delete allow 14497
 sudo ufw delete allow 13513
@@ -66,7 +65,6 @@ sudo ufw delete allow 11828
 sudo ufw delete allow 14637
 sudo ufw delete allow 15489
 sudo ufw delete allow 15378
-sudo ufw delete allow 8299
 sudo ufw delete allow 15243
 sudo ufw delete allow 10524
 sudo ufw delete allow 12924
