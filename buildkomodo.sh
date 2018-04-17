@@ -5,7 +5,7 @@ sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoco
 cd ~
 git clone https://github.com/jl777/komodo
 cd komodo
-git checkout jl777
+git checkout beta
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
 sudo ln -sf /home/$USER/komodo/src/komodo-cli /usr/local/bin/komodo-cli
