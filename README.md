@@ -24,9 +24,17 @@ You will need to create a pubkey.txt file and place it in the **scaletest** dire
 ```shell
 pubkey=<yourpubkey>
 ```
-To get the pubkey you need to do validateaddress on an Raddress you have the private key for. (see [txtest-cli](#txtest-cli)) section below for an example of how to get a new address if you don't already have one you want to use.
 
-Next run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuuing. After importing the private key, you will need to restart your chains making sure pubkey.txt has been created.
+To get a pubkey run `validateaddress` on an Raddress you have the private key for. (see [txtest-cli](#txtest-cli)) section below for an example of how to get a new address if you don't already have one you want to use.
+
+Next you will perform the initial sync and run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuing. 
+
+```shell
+./sync_assets
+./assets-cli importprivkey <your private key>
+```
+
+After importing the private key, you will need to restart your chains.
 
 You will need funds sent to the address from the seed node operator to the R address of pubkey.txt in this folder.
 
