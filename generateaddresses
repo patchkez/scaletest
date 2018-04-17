@@ -1,0 +1,16 @@
+#!/bin/bash
+cd ~/scaletest/
+source coinlist
+all=${coinlist[0]}
+name=${all%% *}
+
+recipientfile=recipients
+
+echo "recipients=(" > $recipientfile
+
+for ((i=1;i<=100;i++))
+do
+    printf "%36s\n" "'$(komodo-cli -ac_name=$name getnewaddress)'" >> $recipientfile
+done
+
+echo ")" >> $recipientfile
