@@ -40,13 +40,23 @@ You will need funds sent to the address from the seed node operator to the R add
 
 **Make sure your Raddress is posted in the Signups Page so the operator can send funds.**
 
-### For Transaction Blasters
+## For Transaction Blasters
 
-To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per node.
+### For Large Powerful Systems 
+
+To blast transactions, this script will send 100 loops of 5 transactions on each chain. 50,000 Transactions each with 100 outputs. 5M payments per call.
 
 ```shell
 ./sync_assets
 sh blastloop.sh
+```
+### For Smaller Systems 1-4 Core VPS
+
+This script will send a loop of 10 `sendtoaddress` calls to a random address from the recipients file, then sleep for 20s, and repeat 10 more times. To send a total of 1000 TX. If the CPU is not being maxed out you can decrease sleep time. You might have to fine tune for your particualr system.
+
+```shell
+./sync_assets
+sh slowloop.sh
 ```
 
 ### For CPU Miners
