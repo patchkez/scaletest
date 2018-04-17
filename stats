@@ -1,0 +1,59 @@
+#!/bin/bash
+IFS=
+source coinlist
+#Change to sleepytime=false if you don't want it to loop
+sleepytime=600
+utxoamt=0.001
+txamt=0.00777
+
+#How many transactions back to scan
+txscanamount=77777
+
+format="%-8s %6s %6s %7s %12.4f %6s"
+
+outputstats ()
+{
+    count=0
+    now=$(date +"%Y-%m-%d %T%z")
+
+    printf "\n\n%-8s %6s %6s %7s %12s %6s     %-8s %6s %6s %7s %12s %6s     %-8s %6s %6s %7s %12s %6s     %-8s %6s %6s %7s %12s %6s\n" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-";
+
+    while [ "x${coinlist[count]}" != "x" ]
+    do
+        all=${coinlist[count]}
+        name=${all%% *}
+        if [ "$name" != "" ]
+        then
+            info=$(komodo-cli -ac_name=$name getinfo)
+            txinfo=$(komodo-cli -ac_name=$name listtransactions "" $txscanamount)
+
+            printf "$format" "$name" \
+                    "$(echo $txinfo | grep $txamt | wc -l)" \
+                    "$(komodo-cli -ac_name=$name listunspent | grep $utxoamt | wc -l)" \
+                    "$(echo $info | awk ' /\"blocks\"/ {printf $2}' | sed 's/,//')" \
+                    "$(echo $info | awk ' /\"balance\"/ {printf $2}' | sed 's/,//')" \
+                    "$(echo $info | awk ' /\"connections\"/ {printf $2}' | sed 's/,//')"
+        fi
+
+        count=$(( $count + 1 ))
+
+        if ! (( $count % 4 ))
+        then
+            echo
+        else
+            printf "     " ""
+        fi     
+    done
+}
+
+if [ "$sleepytime" != "false" ]
+then
+    while true
+    do
+        outputstats
+        sleep $sleepytime
+    done
+else
+    outputstats
+    echo
+fi
