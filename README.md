@@ -7,12 +7,15 @@ Please sign up here: [Signup Sheet for Scaling Test](http://pad.supernet.org/Str
 ## Install Steps
 These steps are for installing on an empty server/vps. If you are using a testnet notary don't build komodo, just make sure you are on `beta` branch. The scripts will be compaitable with komodo in `~/komodo`. There is also a docker folder, from PatchKez that will generate all these assetchains into docker containers. If you want to do it this way wait for more information, I haven't tested these yet. 
 
+**New step added here to install Cipi's network tweaks and increase open file limit**
+
 ```shell
 sudo apt-get install git
 git clone https://github.com/blackjok3rtt/scaletest.git
 cd scaletest
+./applytweaks.sh
+sudo reboot
 ./buildkomodo.sh
-cd ~/scaletest
 ```
 
 When this is complete please refer to the section below for the role you are filling.
