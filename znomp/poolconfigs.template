@@ -1,25 +1,38 @@
 {
-    "enabled": true,
+    "enabled":true,
     "coin": "COINNAMEVAR.json",
 
     "address": "WALLETADDRVAR",
-    "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
+    "_comment_address": "pools komodo address; ex, RSXGTHQSqwcMw1vowKfEE7sQ8fAmv1tmso",
 
     "zAddress": "",
-    "_comment_zAddress": "a private address used to send coins to tAddress.",
+    "_comment_zAddress": "shielding not required in komodo, not used",
 
     "tAddress": "WALLETADDRVAR",
-    "_comment_tAddress": "transparent address used to send payments, make this a different address, otherwise payments will not send",
+    "_comment_tAddress": "set to same as pools komodo address; ex, RSXGTHQSqwcMw1vowKfEE7sQ8fAmv1tmso",
 
-    "walletInterval": 10,
+    "walletInterval": 5,
+    "_comment_walletInterval": "Used to cache komodo coin stats, shielding not performed.",
 
     "rewardRecipients": {
     },
 
-    "paymentProcessing": {
+    "tlsOptions": {
         "enabled": false,
-        "paymentInterval": 20,
+        "serverKey":"",
+        "serverCert":"",
+        "ca":""
+    },
+    
+    "paymentProcessing": {
+        "minConf": 10,
+        "enabled": false,
+        "paymentMode": "prop",
+        "_comment_paymentMode":"prop, pplnt",
+        "paymentInterval": 600,
+        "_comment_paymentInterval": "Interval in seconds to check and perform payments.",
         "minimumPayment": 0.1,
+        "maxBlocksPerPayment": 3,
         "daemon": {
             "host": "127.0.0.1",
             "port": RPCPORTVAR,
@@ -30,6 +43,7 @@
 
     "ports": {
         "STRATUMPORTVAR": {
+            "tls":false,
             "diff": 0.05,
             "varDiff": {
                 "minDiff": 0.04,
@@ -63,7 +77,7 @@
         "port": 3306,
         "user": "me",
         "password": "mypass",
-        "database": "zcl",
+        "database": "kmd",
         "checkPassword": true,
         "autoCreateWorker": false
     }
