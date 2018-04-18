@@ -38,8 +38,8 @@ do
     echo "$cointemplate" | sed "s/COINNAMEVAR/$acnameonly/" | sed "s/MAGICREVVAR/$magicrev/" > $coinsdir/$acnameonly.json
     echo "$pooltemplate" | sed "s/COINNAMEVAR/$acnameonly/" | sed "s/WALLETADDRVAR/$walletaddress/" | sed "s/STRATUMPORTVAR/$stratumport/" | sed "s/RPCPORTVAR/$rpcport/" | sed "s/RPCUSERVAR/$rpcuser/" | sed "s/RPCPASSVAR/$rpcpass/" > $poolconfigdir/$acnameonly.json
 
-    echo "sudo ufw allow $p2pport comment 'Stratum $acnameonly'" >> $ufwenablefile
-    echo "sudo ufw delete allow $p2pport" >> $ufwdisablefile
+    echo "sudo ufw allow $stratumport comment 'Stratum $acnameonly'" >> $ufwenablefile
+    echo "sudo ufw delete allow $stratumport" >> $ufwdisablefile
 
     let "stratumport = $stratumport + 1"
 done < "$magicfile"
