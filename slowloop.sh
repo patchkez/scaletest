@@ -7,5 +7,5 @@ do
     		selectedaddress=${recipients[$RANDOM % ${#recipients[@]} ]}
     		./txsend sendtoaddress $selectedaddress 0.00777
 	done
-	sleep 20
+	sleep 1
 done
