@@ -4,13 +4,18 @@ count=0
 rm testlog
 echo "start" >> testlog
 date >> testlog
-while [  $COUNTER -lt 100 ]; do
+while [  $COUNTER -lt 500 ]; do
   ./txblast.sh 0.000777 &
   ./txblast.sh 0.000777 &
   ./txblast.sh 0.000777 &
   ./txblast.sh 0.000777 &
   ./txblast.sh 0.000777 &
-  sleep 1
+  ./txblast.sh 0.000777 &
+  ./txblast.sh 0.000777 &
+  ./txblast.sh 0.000777 &
+  ./txblast.sh 0.000777 &
+  ./txblast.sh 0.000777 &
+  sleep 7
   let COUNTER=COUNTER+1
   count=$(( count +1 ))
 done
