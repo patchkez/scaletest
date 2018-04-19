@@ -17,14 +17,18 @@ pooltemplate=$(<$pooltpl)
 mkdir -p $coinsdir
 mkdir -p $poolconfigdir
 
+#clean old up
+rm $ufwenablefile
+rm $ufwdisablefile
+
 while read acname ports magic uknum acsupply ukword
 do
     acnameonly=$(echo $acname | sed 's/://')
-    magic=$(echo $magic | sed 's/magic.//')
-    magicrev=""
-    for((i=0;i<=${#magic};i+=2)); do
-        magicrev="${magic:i:2}$magicrev"
-    done
+    #magic=$(echo $magic | sed 's/magic.//')
+    #magicrev=""
+    #for((i=0;i<=${#magic};i+=2)); do
+    #    magicrev="${magic:i:2}$magicrev"
+    #done
 
     p2pport=$(echo $ports | egrep -o '[[:digit:]]{4,5}' | head -n1)
 
