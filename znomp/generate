@@ -21,6 +21,7 @@ while read acname ports magic uknum acsupply ukword
 do
     acnameonly=$(echo $acname | sed 's/://')
     magic=$(echo $magic | sed 's/magic.//')
+    magicrev=""
     for((i=0;i<=${#magic};i+=2)); do
         magicrev="${magic:i:2}$magicrev"
     done
