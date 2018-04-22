@@ -6,5 +6,5 @@ if [[ $1 = "" ]]
 fi
 for i in {0..16}
   do
-    ./txsend sendtoaddress $1 100 &
+    ./txsend sendtoaddress $1 1000 &
 done
