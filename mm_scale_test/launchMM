@@ -8,9 +8,6 @@ count=0
 while [ "x${rpcports[count]}" != "x" ]
 do
   rpcport=${rpcports[count]}
-  if [ "$name" != "" ]
-    then
-      ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":$coins, \"rpcport\":$rpcport}" &
-    fi
+  ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":$coins, \"rpcport\":$rpcport}" &
   count=$(( $count +1 ))
 done
