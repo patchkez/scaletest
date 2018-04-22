@@ -2,6 +2,7 @@
 magicfile=../magic
 coins='export coins="['
 rm enable
+echo "source userpass" >> enable
 while read acname ports magic uknum acsupply ukword
 do
     acnameonly=$(echo $acname | sed 's/://')
