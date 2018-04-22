@@ -1,15 +1,17 @@
 #!/bin/bash
 #Generate password add it to password file
-password=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 128 | head -n 1)
-echo $password >> password
+password=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 20 | head -n 1)
+echo "password=$password" > password
 
 #Use Calcaddress from marketmaker to generate address from the password
 calcaddress=$(./calcaddress)
-sed -n 's|.*"coinaddr":"\([^"]*\)".*|Radd=\1|p' ~/scripts/wallet.txt > Radd
+echo $calcaddress > calcaddress.txt
+Radd="Radd="
+Radd+=$(grep -Po '"coinaddr":.*?[^\\]"' calcaddress.txt | awk -F':' '{print $2}')
 
-#Send TX to each address in address array and add the TXID to txid array list. 1 TXid for each chain will be returned.
+echo $Radd > Radd.txt
 
-#Start 1 marketmaker for each chain
-rpcport:(x+1)
+#Generates 1 UTXO to the address created above for each chain and generates a new rpc port for marketmaker and saves the TXid in an array.
+./fundRadd2.sh 10
 
 #Use the list of txid's to call txblast API for each chain. 

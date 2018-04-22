@@ -1,3 +1,3 @@
 #!/bin/bash
 source userpass
-curl --silent --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"listunspent\",\"coin\":\"TXSCL\",\"address\":\"RYC2nyQTxndiwWVmHXapccSMGSw7NNre77\"}" | jq
+curl --silent --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"listunspent\",\"coin\":\"TXSCL\",\"address\":\"RX8SinRsb1n9CMX68D8eQuuZLLqAJqU9Q9\"}" | jq

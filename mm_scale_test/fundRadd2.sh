@@ -1,6 +1,6 @@
 #!/bin/bash
-source coinlist
-source Radd
+source ../coinlist
+source Radd.txt
 count=0
 rpcport=7783
 echo "TXids=(" > TXids
@@ -14,20 +14,25 @@ then
     exit
 fi
 
+amount=$1
+
+rm rpcports
+rm TXids
+
 while [ "x${coinlist[count]}" != "x" ]
 do
   all=${coinlist[count]}
   name=${all%% *}
   if [ "$name" != "" ]
     then
-     TXid=$(~/komodo/src/komodo-cli -ac_name=$name sendtoaddress $Radd $1)
-     echo $TXid >> TXid
-     echo $rpcport >> rpcports
+     TXid=$(~/komodo/src/komodo-cli -ac_name=$name sendtoaddress $Radd $amount)
+     echo "'$rpcport'" >> rpcports
      rpcport=$(( rpcport +1 ))
-     echo "'$TXid'" >> $TXids
+     echo "'$TXid'" >> TXids
     fi
   count=$(( $count +1 ))
 done
 
-echo ")" > TXids
-echo ")" > rpcports
+echo "amount=$(($amount * 100000000))" > amount.txt
+echo ")" >> TXids
+echo ")" >> rpcports
