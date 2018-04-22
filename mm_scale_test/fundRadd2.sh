@@ -22,9 +22,9 @@ do
     then
      TXid=$(~/komodo/src/komodo-cli -ac_name=$name sendtoaddress $Radd $1)
      echo $TXid >> TXid
+     echo $rpcport >> rpcports
      rpcport=$(( rpcport +1 ))
      echo "'$TXid'" >> $TXids
-     echo $rpcport >> rpcports
     fi
   count=$(( $count +1 ))
 done
