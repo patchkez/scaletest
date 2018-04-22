@@ -1,0 +1,15 @@
+#!/bin/bash
+#Generate password add it to password file
+password=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 128 | head -n 1)
+echo $password >> password
+
+#Use Calcaddress from marketmaker to generate address from the password
+calcaddress=$(./calcaddress)
+sed -n 's|.*"coinaddr":"\([^"]*\)".*|Radd=\1|p' ~/scripts/wallet.txt > Radd
+
+#Send TX to each address in address array and add the TXID to txid array list. 1 TXid for each chain will be returned.
+
+#Start 1 marketmaker for each chain
+rpcport:(x+1)
+
+#Use the list of txid's to call txblast API for each chain. 
