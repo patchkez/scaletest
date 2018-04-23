@@ -17,6 +17,8 @@ Run `./calcaddfirstrun` Get the Raddress from here and get someone to fund you t
 
 `./assets-cli stop` to stop all chains. Then Restart them with `./sync_assets`
 
+### Instructions
+
 Start `marketmaker` using `./client` in `mm_scale_test` dir.
 
 Once marketmaker is running check you have balance on all chains with `./assets-cli getbalance`
