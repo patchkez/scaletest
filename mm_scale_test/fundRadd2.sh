@@ -13,6 +13,7 @@ then
 fi
 
 amount=$1
+rpccount=0
 
 echo "TXids=(" > TXids
 echo "rpcports=(" > rpcports
@@ -26,7 +27,13 @@ do
      TXid=$(~/komodo/src/komodo-cli -ac_name=$name sendtoaddress $Radd $amount)
      echo "$TXid....$rpcport"
      echo "'$rpcport'" >> rpcports
-     rpcport=$(( rpcport +1 ))
+     if [ $rpccount == 4 ] 
+       then
+         rpccount=0
+         rpcport=$(( rpcport +10 ))
+       else
+         rpccount=$(( rpccount +1 ))
+       fi
      echo "'$TXid'" >> TXids
     fi
   count=$(( $count +1 ))

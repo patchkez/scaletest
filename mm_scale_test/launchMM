@@ -4,10 +4,17 @@ source passphrase
 source coins
 source rpcports
 count=0
+laststarted=0
 
 while [ "x${rpcports[count]}" != "x" ]
 do
   rpcport=${rpcports[count]}
-  ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":$coins, \"rpcport\":$rpcport}" &
+  if [ "$rpcport" != "$laststarted" ]
+    then
+      echo "started $rpcport"
+      ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":$coins, \"rpcport\":$rpcport}" &
+      laststarted=$rpcport
+      sleep 5
+    fi
   count=$(( $count +1 ))
 done
