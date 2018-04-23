@@ -5,7 +5,12 @@ echo "password=$password" > password
 
 #Use Calcaddress from marketmaker to generate address from the password
 calcaddress=$(./calcaddress)
-echo $calcaddress > calcaddress.txt
+  if [ "$calcaddress" != "" ]
+    then
+      echo $calcaddress > calcaddress.txt
+    else
+	  echo "Make sure MarketMaker is running"
+    fi
 Radd="Radd="
 Radd+=$(grep -Po '"coinaddr":.*?[^\\]"' calcaddress.txt | awk -F':' '{print $2}')
 
