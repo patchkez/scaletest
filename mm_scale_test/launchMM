@@ -16,5 +16,5 @@ do
       laststarted=$rpcport
       sleep 5
     fi
-  count=$(( $count +1 ))
+  count=$(( $count +150 ))
 done
