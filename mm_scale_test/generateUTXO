@@ -1,4 +1,6 @@
 #!/bin/bash
+#Clean dir of old files
+rm amount.txt calcaddress.txt password Radd.txt rpcports TXids
 #Generate password add it to password file
 password=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 20 | head -n 1)
 echo "password=$password" > password
@@ -8,8 +10,9 @@ calcaddress=$(./calcaddress)
   if [ "$calcaddress" != "" ]
     then
       echo $calcaddress > calcaddress.txt
-    else
-	  echo "Make sure MarketMaker is running"
+    else 
+       echo "Make sure MarketMaker is running"
+       exit; 
     fi
 Radd="Radd="
 Radd+=$(grep -Po '"coinaddr":.*?[^\\]"' calcaddress.txt | awk -F':' '{print $2}')
