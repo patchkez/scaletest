@@ -1,5 +1,4 @@
 #!/bin/bash
 source passphrase
-source coins
-./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":"[{\"coin\":\"TXSCL\",\"asset\":\"TXSCL\",\"rpcport\":11821}]}" &
+./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":"[{\"coin\":\"TXSCL\",\"asset\":\"TXSCL\",\"rpcport\":11821}]}"" &
 
