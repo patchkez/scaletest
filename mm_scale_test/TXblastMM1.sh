@@ -15,6 +15,6 @@ do
   all=${coinlist[count]}
   coin=${all%% *}
   utxovout=1
-  curl --url "http://127.0.0.1:$rpcport" --data "{\"userpass\":\"$userpass\",\"broadcast\":1,\"numblast\":50000,\"password\":\"$password\",\"utxotxid\":\"$TXid\",\"utxovout\":$utxovout,\"utxovalue\":$amount,\"txfee\":100000,\"method\":\"txblast\",\"coin\":\"$coin\",\"outputs\":[{\"RKV4MzePkH8H9N6K3RdC1JDDWBLbCE4H5p\":0.0001}]} &"
+  curl --url "http://127.0.0.1:$rpcport" --data "{\"userpass\":\"$userpass\",\"broadcast\":1,\"numblast\":50000,\"password\":\"$password\",\"utxotxid\":\"$TXid\",\"utxovout\":$utxovout,\"utxovalue\":$amount,\"txfee\":100000,\"method\":\"txblast\",\"coin\":\"$coin\",\"outputs\":[{\"RKV4MzePkH8H9N6K3RdC1JDDWBLbCE4H5p\":0.0001}]}" &
   count=$(( $count +1 ))
 done
