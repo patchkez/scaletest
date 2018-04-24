@@ -8,7 +8,7 @@ do
     acnameonly=$(echo $acname | sed 's/://')
     thisconf=$(<~/.komodo/$acnameonly/$acnameonly.conf)
     rpcport=$(echo $thisconf | grep -Po "rpcport=(\S*)" | sed 's/rpcport=//')
-    echo "'[{\\\"coin\\\":\\\"$acnameonly\\\",\\\"asset\\\":\\\"$acnameonly\\\",\\\"rpcport\\\":$rpcport}]'" >>  coins
+    echo "'[{\"coin\":\"$acnameonly\",\"asset\":\"$acnameonly\",\"rpcport\":$rpcport}]'" >>  coins
     count=$(( count +1 ))
 done < "$magicfile"
 

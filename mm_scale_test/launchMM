@@ -11,6 +11,6 @@ do
   rpcport=${rpcports[count]}
   echo "started $rpcport"
   ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":$coin, \"rpcport\":$rpcport}" &
-   sleep 5
+   sleep 3
   count=$(( $count +1 ))
 done
