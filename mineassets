@@ -11,7 +11,7 @@ do
   supply=`expr "$all" : '.* \(.*\)'`
   if [ "$name" != "" ]
     then
-     ~/komodo/src/komodod -pubkey=$pubkey -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen  &
+     ~/komodo/src/komodod -pubkey=$pubkey -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -gen -blockprioritysize=0 &
      sleep $delay
     fi
   count=$(( $count +1 ))
