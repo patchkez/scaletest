@@ -5,13 +5,17 @@ You need a recently compiled `marketmaker` from jl777 branch in jl777/SuperNET r
 
 place `marketmaker` in mm_scale_test directory
 
-edit the `passphrase` file in scripts sub directory
+create the `passphrase` file in scripts sub directory
+
+`passphrase="your passphrase in quotes"`
 
 from mm_scale_test directory run `./client`
 
 it will show `userpass` in console after started `marketmaker`
 
 use that and save it in `userpass` file
+
+`userpass=<user pass from marketmaker console output>`
 
 Run `./calcaddfirstrun` Get the Raddress from here and get someone to fund you to this address, you also need to `./assets-cli importprivkey "wif"` for the shown wif key. Also make sure you get the pubkey and put that in `pubkey.txt` in the `scaltest` dir.
 
