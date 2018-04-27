@@ -2,12 +2,13 @@
 numchains=$1
 chainname=$2
 numcoins=$3
+numacreward=$4
 
 if [ -z ${1+x} ] || [ -z ${2+x} ] || [ -z ${3+x} ]
 then 
     echo
-    echo "Usage: ./genacs <numchains> <chainname> <supply>"
-    echo "Example: ./genacs 10 TXTEST 1000000"
+    echo "Usage: ./genacs <numchains> <chainname> <supply> <acreward>"
+    echo "Example: ./genacs 4096 TXSCL 77000000 100000000"
     echo
     exit
 fi
@@ -24,7 +25,7 @@ seedipfile=seedip
 cd ~/komodo/src
 git pull
 gcc -o manychains komodo_port.c
-./manychains -gen $numchains $chainname $numcoins > $startdir/$manychainsout
+./manychains -gen $numchains $chainname 0 $numcoins $numacreward > $startdir/$manychainsout
 
 cd $startdir
 
@@ -43,8 +44,7 @@ do
     echo "'$acnameonly $acsupplyonly'" >> $coinlistfile
     echo "sudo ufw allow $p2pport comment '$acnameonly'" >> $ufwenablefile
     echo "sudo ufw delete allow $p2pport" >> $ufwdisablefile
-    #echo "$komodo $acname $acsupply &" >> $acfile
-    #echo "$komodo -gen -genproclimit=1 $acname $acsupply &" >> $genfile
+    echo $acnameonly
 done < "$manychainsout"
 
 echo ")" >> $coinlistfile
@@ -53,8 +53,6 @@ myip=`curl -s4 checkip.amazonaws.com`
 echo "seed_ip=$myip" > $seedipfile
 
 rm $manychainsout
-#chmod +x $acfile
-#chmod +x $genfile
 chmod +x $ufwenablefile
 chmod +x $ufwdisablefile
 
