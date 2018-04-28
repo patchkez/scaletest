@@ -1,18 +1,39 @@
 #!/bin/bash
+delay=1
+
+chainstart=$1
+chainend=$2
+
+if [[ -z ${2+x} && ! -z ${1+x} ]]
+then 
+    echo
+    echo "./sync_assets without parameters will attempt to start all chains in coinlist, otherwise there are 2 parameters that can be set to start all chains within a range you specify"
+    echo 
+    echo "Usage: ./sync_assets <chainfrom> <chainto>"
+    echo "Example: ./sync_assets 100 200"
+    echo
+    exit
+fi
+
 source seedip
 source coinlist
 source pubkey.txt
-count=0
-delay=1
 
-while [ "x${coinlist[count]}" != "x" ]
+if [[ ! -z ${1+x} ]]
+then
+    count=chainstart
+else
+    count=0
+fi
+
+while [[ (! -z ${2+x} && $count -le $chainend) || (-z ${2+x} && $count -le ${#coinlist[@]}) ]]
 do
   all=${coinlist[count]}
   name=${all%% *}
   supply=`expr "$all" : '.* \(.*\)'`
   if [ "$name" != "" ]
     then
-     ~/komodo/src/komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -pubkey=$pubkey $1 &
+     ~/komodo/src/komodod -ac_name=$name -ac_supply=$supply -addnode=$seed_ip -pubkey=$pubkey &
      sleep $delay
   fi
   count=$(( $count +1 ))
