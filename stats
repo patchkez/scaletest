@@ -1,6 +1,6 @@
 #!/bin/bash
 IFS=
-source coinlist
+source coinlist2
 #Change to sleepytime=false if you don't want it to loop
 sleepytime=600
 utxoamt=0.001
@@ -18,9 +18,9 @@ outputstats ()
 
     printf "\n\n%-8s %6s %6s %7s %12s %6s     %-8s %6s %6s %7s %12s %6s     %-8s %6s %6s %7s %12s %6s     %-8s %6s %6s %7s %12s %6s\n" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-" "-ASSET-" "-SENT-" "-UTXO-" "-BLOX-" "-BALANCE-" "-CNCT-";
 
-    while [ "x${coinlist[count]}" != "x" ]
+    while [[ $count -le ${#coinlist2[@]} ]]
     do
-        all=${coinlist[count]}
+        all=${coinlist2[count]}
         name=${all%% *}
         if [ "$name" != "" ]
         then
