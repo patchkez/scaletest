@@ -5,7 +5,7 @@ This repo contains tools for easy setup to participate in the scaling test.
 Please sign up here: [Signup Sheet for Scaling Test](http://pad.supernet.org/Stress_Test_Signups)
 
 ## Install Steps
-These steps are for installing on an empty server/vps. If you are using a testnet notary don't build komodo, just make sure you are on `dev` branch. The scripts will be compaitable with komodo in `~/komodo`. There is also a docker folder, from PatchKez that will generate all these assetchains into docker containers. If you want to do it this way wait for more information, I haven't tested these yet. 
+These steps are for installing on an empty server/vps. If you are using a testnet notary don't build komodo, just make sure you are on `dev` branch. The scripts will be compatible with komodo in `~/komodo`. There is also a docker folder, from PatchKez that will generate all these assetchains into docker containers. If you want to do it this way wait for more information, I haven't tested these yet. 
 
 **New step added here to install Cipi's network tweaks and increase open file limit**
 
@@ -29,6 +29,12 @@ pubkey=<yourpubkey>
 ```
 
 To get a pubkey run `validateaddress` on an Raddress you have the private key for. (see [txtest-cli](#txtest-cli)) section below for an example of how to get a new address if you don't already have one you want to use.
+
+Then you will specify the range of chains you wish to work with
+
+```shell
+./setchains <startnum> <endnum>
+```
 
 Next you will perform the initial sync and run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuing. 
 

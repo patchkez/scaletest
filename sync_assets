@@ -1,13 +1,13 @@
 #!/bin/bash
-source seedip
-source coinlist
-source pubkey.txt
-count=0
 delay=1
 
-while [ "x${coinlist[count]}" != "x" ]
+source seedip
+source coinlist2
+source pubkey.txt
+count=0
+while [[ $count -le ${#coinlist2[@]} ]]
 do
-  all=${coinlist[count]}
+  all=${coinlist2[count]}
   name=${all%% *}
   supply=`expr "$all" : '.* \(.*\)'`
   if [ "$name" != "" ]
