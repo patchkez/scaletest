@@ -1,12 +1,12 @@
 #!/bin/bash
 source pubkey.txt
 source seedip
-source coinlist
+source coinlist2
 count=0
 delay=1
-while [ "x${coinlist[count]}" != "x" ]
+while [[ $count -lt ${#coinlist2[@]} ]]
 do
-  all=${coinlist[count]}
+  all=${coinlist2[count]}
   name=${all%% *}
   supply=`expr "$all" : '.* \(.*\)'`
   if [ "$name" != "" ]
