@@ -30,6 +30,12 @@ pubkey=<yourpubkey>
 
 To get a pubkey run `validateaddress` on an Raddress you have the private key for. (see [txtest-cli](#txtest-cli)) section below for an example of how to get a new address if you don't already have one you want to use.
 
+Then you will specify the range of chains you wish to work with
+
+```shell
+./setchains <startnum> <endnum>
+```
+
 Next you will perform the initial sync and run importprivkey on all the test assetchains (see [assets-cli](#assets-cli)) before continuing. 
 
 ```shell

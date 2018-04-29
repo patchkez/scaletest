@@ -1,11 +1,11 @@
 #!/bin/bash
 cd ~/scaletest/
-source coinlist
+source coinlist2
 count=0
 
-while [ "x${coinlist[count]}" != "x" ]
+while [ "x${coinlist2[count]}" != "x" ]
 do
-  all=${coinlist[count]}
+  all=${coinlist2[count]}
   name=${all%% *}
   if [ "$name" != "" ]
     then
