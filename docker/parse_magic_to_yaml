@@ -4,7 +4,7 @@ magic="../magic"
 yaml="data_test.yml"
 
 
-echo "  test:" >> ${yaml}
+echo "  test:" > ${yaml}
 
 IFS='
 '
@@ -12,10 +12,10 @@ IFS='
 for asset in `cat ${magic}`;do
   echo "======= ${asset} ========"
   ASSET_NAME=`echo ${asset} | awk -F " " '{print $1}'`
-  SUPPLY=`echo ${asset} | awk -F " " '{ print $5}'`
-  PORTS=`echo ${asset} | awk -F " " '{print $2}' | sed 's/port\.//g'`
-  P2P_PORT=`echo ${PORTS} | awk -F "/" '{print $1}'`
-  RPC_PORT=`echo ${PORTS} | awk -F "/" '{print $2}'`
+  SUPPLY=`echo ${asset} | awk -F " " '{ print $6}'`
+ # PORTS=`echo ${asset} | awk -F " " '{print $2}' | sed 's/port\.//g'`
+  P2P_PORT=`echo ${asset} | awk -F " " '{print $2}' | cut -c 5-`
+  RPC_PORT=`echo ${asset} | awk -F " " '{print $3}' | cut -c 5-`
 
   echo "    ${ASSET_NAME}" >> ${yaml}
   echo "      ammount: ${SUPPLY}" >> ${yaml}
