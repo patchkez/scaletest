@@ -9,8 +9,8 @@ clang -g  -Wno-deprecated -c -DISNOTARYNODE=1 -DLIQUIDITY_PROVIDER=1  main.c igu
 clang -g -o ../agents/iguana *.o ../agents/libcrypto777.a -lnanomsg -lcurl -lssl -lcrypto -lpthread -lz -lm
 
 #download scale array and start iguana
-wget -qO testnet https://raw.githubusercontent.com//blackjok3rtt/scaletest/4096/scale.json
-../agents/iguana scale & #> iguana.log 2> error.log  &
+wget -qO scale.json https://raw.githubusercontent.com//blackjok3rtt/scaletest/4096/scale.json
+../agents/iguana scale.json & #> iguana.log 2> error.log  &
 myip=`curl -s4 checkip.amazonaws.com`
 source ~/scaletest/pubkey.txt
 source ~/scaletest/seedip.txt
