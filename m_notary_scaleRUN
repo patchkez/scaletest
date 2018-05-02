@@ -1,16 +1,20 @@
 source pubkey.txt
 source seedip
 #add coins
-COINS_7776/btc_7776
-COINS_7776/kmd_7776
-./wp_7776
-./coins_7776
+#COINS_7776/kmd_7776
+#./wp_7776
+#./coins_7776
+
+myip=`curl -s4 checkip.amazonaws.com`
+sleep 3
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"SuperNET\",\"method\":\"myipaddr\",\"ipaddr\":\"$myip\"}"
+sleep4
 
 #Add notaries
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"$seed_ip\"}"
 
-sleep 90
+#sleep 90
 
 #start coins
-./startdpow
+#./startdpow
 
