@@ -7,11 +7,17 @@ cd ../crypto777; ./m_LP; cd ../iguana
 clang -g -Wno-deprecated -c -O2 -DISNOTARYNODE=1 -DLIQUIDITY_PROVIDER=1 *.c ../basilisk/basilisk.c ../gecko/gecko.c ../datachain/datachain.c
 clang -g  -Wno-deprecated -c -DISNOTARYNODE=1 -DLIQUIDITY_PROVIDER=1  main.c iguana777.c iguana_bundles.c ../basilisk/basilisk.c
 clang -g -o ../agents/iguana *.o ../agents/libcrypto777.a -lnanomsg -lcurl -lssl -lcrypto -lpthread -lz -lm
-
-#download scale array and start iguana
-wget -qO scale.json https://raw.githubusercontent.com/blackjok3rtt/scaletest/4096/scale.json
-../agents/iguana scale.json & #> iguana.log 2> error.log  &
+wget -qO scale https://raw.githubusercontent.com/blackjok3rtt/scaletest/4096/scale.json
+../agents/iguana scale & #> iguana.log 2> error.log  &
 myip=`curl -s4 checkip.amazonaws.com`
+
 sleep 4
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"SuperNET\",\"method\":\"myipaddr\",\"ipaddr\":\"$myip\"}"
 sleep 3
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"$myip\"}"
+coins/kmd_7776
+
+cd ~/scaletest
+./wp_7776
+coins_7776
+./startdpow
