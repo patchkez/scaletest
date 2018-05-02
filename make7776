@@ -1,12 +1,13 @@
 #!/bin/bash
-cd ~/scaletest
+#cd ~/scaletest
 
 chainstart=$1
 chainend=$2
 coinlist2file=coins_7776
+dpowfile=startdpow
 
 if [[ -z ${2+x} && ! -z ${1+x} ]]
-then 
+then
     echo
     echo "setchains with no parameters will set you to work with all coins in the master list, otherwise you can set a range of chains to work with:"
     echo
@@ -25,6 +26,7 @@ fi
 
 source coinlist
 rm $coinlist2file
+rm $dpowfile
 
 while [[ (! -z ${2+x} && $count -le $chainend) || (-z ${2+x} && $count -le ${#coinlist[@]}) ]]
 do
@@ -36,6 +38,11 @@ do
        coin7776+=$name
        coin7776+="_7776"
        echo $coin7776 >> $coinlist2file
+       #Make dPow file
+       dpow='curl --url "http://127.0.0.1:7776" --data "{\"timeout\":60000,\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"'
+       dpow+=$name
+       dpow+='\",\"pubkey\":\"$pubkey\"}"'
+       echo $dpow >> $dpowfile
     fi
     count=$(( $count +1 ))
 done
