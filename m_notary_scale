@@ -17,7 +17,3 @@ sleep 3
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"$myip\"}"
 coins/kmd_7776
 
-cd ~/scaletest
-./wp_7776
-coins_7776
-./startdpow

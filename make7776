@@ -26,7 +26,8 @@ fi
 
 source coinlist
 rm $coinlist2file
-rm $dpowfile
+echo "#!/bin/bash" > $dpowfile
+echo "source pubkey.txt" >> $dpowfile
 
 while [[ (! -z ${2+x} && $count -le $chainend) || (-z ${2+x} && $count -le ${#coinlist[@]}) ]]
 do
@@ -48,3 +49,4 @@ do
 done
 
 chmod +x $coinlist2file
+chmod +x $dpowfile

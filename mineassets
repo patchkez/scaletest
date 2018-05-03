@@ -3,7 +3,7 @@ source pubkey.txt
 source seedip
 source coinlist2
 count=0
-delay=1
+delay=4
 while [[ $count -lt ${#coinlist2[@]} ]]
 do
   all=${coinlist2[count]}
