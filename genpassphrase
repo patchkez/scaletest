@@ -1,0 +1,10 @@
+cd ~/scaletest
+passphrase=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 128 | head -n 1)
+echo "passphrase=$passphrase" > passphrase.txt
+source passphrase.txt
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"bitcoinrpc\",\"method\":\"encryptwallet\",\"passphrase\":\"$passphrase\"}" > wallet.txt
+sed -n 's|.*"btcpubkey":"\([^"]*\)".*|pubkey=\1|p' wallet.txt > pubkey.txt
+echo home/$USER > ~/SuperNET/iguana/userhome.txt
+KMDwif=$(sed -n 's|.*"KMDwif":"\([^"]*\)".*|\1|p' wallet.txt)
+~/komodo/src/komodo-cli importprivkey $KMDwif "" false
+./assets-cli 'importprivkey' $KMDwif ' "" false'
