@@ -1,0 +1,29 @@
+#!/bin/bash
+delay=1
+
+source seedip
+source coinlist2
+source pubkey.txt
+count=0
+
+echo "coinlist2=(" > brokenchains
+
+while [[ $count -le ${#coinlist2[@]} ]]
+do
+  all=${coinlist2[count]}
+  name=${all%% *}
+  supply=`expr "$all" : '.* \(.*\)'`
+  if [ "$name" != "" ]
+    then
+      komodo-cli -ac_name=$name getbalance
+      if [ "$?" = "1" ]
+        then
+          #~/komodo/src/komodod -pubkey=$pubkey -ac_cc=1 -ac_name=$name -ac_supply=$supply -ac_reward=100000000 -addnode=$seed_ip $1 &
+          echo "'$name $supply'" >> brokenchains
+          sleep $delay
+      fi
+  fi
+  count=$(( $count +1 ))
+done
+
+echo ")" >> brokenchains
