@@ -1,7 +1,12 @@
 #!/bin/bash
 
-magic="../magic"
-yaml="data_test.yml"
+# magic="../magic"
+magic="../manychains"
+yaml="data_test_with_p2p.yml"
+number_of_chains_to_gen=1024
+
+
+
 
 
 echo "  test:" > ${yaml}
@@ -9,16 +14,21 @@ echo "  test:" > ${yaml}
 IFS='
 '
 
-for asset in `cat ${magic}`;do
-  echo "======= ${asset} ========"
+counter=1
+for asset in `cat ${magic} | sed -n 's/^.*ac_name=\(.[^ ]*\).*ac_supply=\(.[^ ]*\).*rpcport \(.*\)$/\1 \2 \3/gp' | awk '{print $0 " " $3-1}'`;do
+  echo "======= ${asset} # ${counter}========"
   ASSET_NAME=`echo ${asset} | awk -F " " '{print $1}'`
-  SUPPLY=`echo ${asset} | awk -F " " '{ print $6}'`
+  SUPPLY=`echo ${asset} | awk -F " " '{ print $2}'`
  # PORTS=`echo ${asset} | awk -F " " '{print $2}' | sed 's/port\.//g'`
-  P2P_PORT=`echo ${asset} | awk -F " " '{print $2}' | cut -c 5-`
-  RPC_PORT=`echo ${asset} | awk -F " " '{print $3}' | cut -c 5-`
+  RPC_PORT=`echo ${asset} | awk -F " " '{print $3}'`
+  P2P_PORT=`echo ${asset} | awk -F " " '{print $4}'`
 
   echo "    ${ASSET_NAME}" >> ${yaml}
-  echo "      ammount: ${SUPPLY}" >> ${yaml}
+  echo "      amount: ${SUPPLY}" >> ${yaml}
   echo "      p2p_port: ${P2P_PORT}" >> ${yaml}
   echo "      rpc_port: ${RPC_PORT}" >> ${yaml}
+  let counter=$(( counter + 1))
+  if [ $counter -eq 1025 ];then
+    exit 0
+  fi
 done
