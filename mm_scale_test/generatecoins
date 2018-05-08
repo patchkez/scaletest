@@ -1,15 +1,18 @@
 #!/bin/bash
-magicfile=../magic
-echo 'coins=(' > coins
+source coinlist2
 count=0
-
-while read acname ports magic uknum acsupply ukword
+while [[ $count -le ${#coinlist2[@]} ]]
 do
-    acnameonly=$(echo $acname | sed 's/://')
-    thisconf=$(<~/.komodo/$acnameonly/$acnameonly.conf)
-    rpcport=$(echo $thisconf | grep -Po "rpcport=(\S*)" | sed 's/rpcport=//')
-    echo "'[{\"coin\":\"$acnameonly\",\"asset\":\"$acnameonly\",\"rpcport\":$rpcport}]'" >>  coins
-    count=$(( count +1 ))
-done < "$magicfile"
+  all=${coinlist2[count]}
+  acname=${all%% *}
+  if [ "$name" != "" ]
+    then
+     acnameonly=$(echo $acname | sed 's/://')
+     thisconf=$(<~/.komodo/$acnameonly/$acnameonly.conf)
+     rpcport=$(echo $thisconf | grep -Po "rpcport=(\S*)" | sed 's/rpcport=//')
+     echo "'[{\"coin\":\"$acnameonly\",\"asset\":\"$acnameonly\",\"rpcport\":$rpcport}]'" >>  coins
+  fi
+  count=$(( $count +1 ))
+done
 
 echo ")" >> coins
