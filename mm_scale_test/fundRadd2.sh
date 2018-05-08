@@ -1,8 +1,8 @@
 #!/bin/bash
-source ../coinlist
+source ../coinlist2
 source Radd.txt
 count=0
-rpcport=60000
+rpcport=7000
 
 if [ -z ${1+x} ]
 then 
@@ -17,9 +17,9 @@ amount=$1
 echo "TXids=(" > TXids
 echo "rpcports=(" > rpcports
 
-while [ "x${coinlist[count]}" != "x" ]
+while [ "x${coinlist2[count]}" != "x" ]
 do
-  all=${coinlist[count]}
+  all=${coinlist2[count]}
   name=${all%% *}
   if [ "$name" != "" ]
     then

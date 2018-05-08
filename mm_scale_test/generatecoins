@@ -1,13 +1,15 @@
 #!/bin/bash
-source coinlist2
+source ../coinlist2
 count=0
+echo 'coins=(' > coins
+
 while [[ $count -le ${#coinlist2[@]} ]]
 do
   all=${coinlist2[count]}
-  acname=${all%% *}
-  if [ "$name" != "" ]
+  acnameonly=${all%% *}
+  if [ "$acnameonly" != "" ]
     then
-     acnameonly=$(echo $acname | sed 's/://')
+     #acnameonly=$(echo $acname | sed 's/://')
      thisconf=$(<~/.komodo/$acnameonly/$acnameonly.conf)
      rpcport=$(echo $thisconf | grep -Po "rpcport=(\S*)" | sed 's/rpcport=//')
      echo "'[{\"coin\":\"$acnameonly\",\"asset\":\"$acnameonly\",\"rpcport\":$rpcport}]'" >>  coins
