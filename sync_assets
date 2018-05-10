@@ -1,5 +1,5 @@
 #!/bin/bash
-delay=2
+delay=1
 
 source seedip
 source coinlist2
